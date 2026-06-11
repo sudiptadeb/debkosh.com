@@ -1,0 +1,7 @@
+name = "debkosh-com"
+compatibility_date = "2025-01-01"
+
+# Static Nuxt site: `npm run generate` prerenders to .output/public.
+# Served as an assets-only Worker (no server script needed).
+[assets]
+directory = ".output/public"
