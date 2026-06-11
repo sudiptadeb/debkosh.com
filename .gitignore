@@ -3,10 +3,9 @@
 .data
 dist
 
-# Build output: ignore everything except the generated static site,
-# which we commit for quick local viewing (CI keeps it up to date).
-.output/*
-!.output/public
+# Build output (Cloudflare Workers Builds generates this on deploy)
+.output
+.wrangler
 
 # Dependencies
 node_modules

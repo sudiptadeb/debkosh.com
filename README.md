@@ -50,11 +50,7 @@ Hosting is Cloudflare Workers (static assets, no server script), configured in
 `wrangler.toml` as the Worker `debkosh-com` serving `.output/public`. The repo is
 connected to Cloudflare Workers Builds, so every push to `main` triggers a build
 (`npm ci && npm run generate`) and a deploy on Cloudflare's side. No GitHub
-secrets needed.
-
-A separate GitHub Actions workflow (`.github/workflows/generate.yml`) regenerates
-`.output/public` on pushes to `main` and commits it back into the repo for quick
-local viewing. It does not deploy.
+secrets needed, and build output is not committed to git.
 
 Going live on the real domain is one step once you're ready:
 Cloudflare → Workers & Pages → debkosh-com → Settings → Domains & Routes →
