@@ -1176,6 +1176,11 @@ useSeoMeta({
 }
 
 @media (max-width: 640px) {
+  .nav-link {
+    padding: 5px 6px;
+    font-size: 12px;
+  }
+
   .hero-inner,
   .sec-inner {
     padding-left: 20px;

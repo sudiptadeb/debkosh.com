@@ -138,6 +138,11 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  /* Nothing should ever cause sideways scroll on small screens. */
+  overflow-x: clip;
+}
+
 html,
 body {
   margin: 0;

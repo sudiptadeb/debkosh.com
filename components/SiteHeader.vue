@@ -65,8 +65,17 @@ withDefaults(
 
 @media (max-width: 640px) {
   .hdr-inner {
-    padding: 12px 20px;
-    gap: 14px;
+    padding: 10px 14px;
+    gap: 10px;
+  }
+
+  .hdr-divider {
+    display: none;
+  }
+
+  .toggle-ph {
+    width: 30px;
+    height: 30px;
   }
 }
 </style>
