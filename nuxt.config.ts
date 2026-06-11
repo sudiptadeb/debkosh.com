@@ -16,8 +16,8 @@ export default defineNuxtConfig({
   // Light/dark, persisted, written as data-theme on <html> to match the
   // Deb Design System tokens. No flash on load (module injects an inline guard).
   colorMode: {
-    preference: 'light',
-    fallback: 'light',
+    preference: 'dark',
+    fallback: 'dark',
     classSuffix: '',
     dataValue: 'theme',
     storageKey: 'debkosh-theme',
