@@ -1,8 +1,12 @@
 # Nuxt
 .nuxt
-.output
 .data
 dist
+
+# Build output: ignore everything except the generated static site,
+# which we commit for quick local viewing (CI keeps it up to date).
+.output/*
+!.output/public
 
 # Dependencies
 node_modules
