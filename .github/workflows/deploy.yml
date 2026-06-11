@@ -1,0 +1,53 @@
+name: Build and deploy
+
+on:
+  push:
+    branches:
+      - main
+      - 'claude/**'
+  workflow_dispatch:
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    env:
+      CF_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CF_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate static site
+        run: npm run generate
+
+      - name: Upload site bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: site
+          path: .output/public
+
+      # Pushes to main deploy to production (debkosh-com.pages.dev).
+      # Pushes to claude/** branches become preview deployments.
+      - name: Create Pages project if missing
+        if: env.CF_API_TOKEN != ''
+        continue-on-error: true
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages project create debkosh-com --production-branch=main
+
+      - name: Deploy to Cloudflare Pages
+        if: env.CF_API_TOKEN != ''
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy .output/public --project-name=debkosh-com --branch=${{ github.ref_name }}
