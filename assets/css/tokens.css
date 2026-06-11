@@ -1,0 +1,174 @@
+/* ============================================================
+   Deb Design System — canonical tokens
+   Ported verbatim from the design handoff (colors_and_type.css).
+   Locked picks (all rounds):
+     • Surface:  Layered — bg → surface-1 (cards) → surface-2 (fills)
+     • Modes:    Light (#FFFFFF) + Dark (#0A0A0A)
+     • Type:     Space Grotesk + Space Mono
+     • Radius:   Subtle — 4 / 6 / 8
+     • Elevation: Flat-first; borders carry separation
+     • Accent:   Sky — #0EA5E9
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+
+:root,
+[data-theme='light'] {
+  /* ----- Surface (layered: bg → surface-1 → surface-2) ----- */
+  --bg: #ffffff; /* page background */
+  --surface-1: #f6f8fa; /* cards, panels, raised containers */
+  --surface-2: #eceff4; /* hover / chip / inline fill / nested */
+  --surface: var(--surface-1); /* legacy alias — prefer --surface-1 */
+  --backdrop: rgba(255, 255, 255, 0.85);
+
+  /* ----- Foreground ----- */
+  --ink: #0f1419;
+  --fg-1: #0f1419;
+  --fg-2: #4a5567;
+  --fg-3: #8b95a7;
+  --fg-4: #b8c0cc;
+
+  /* ----- Border ----- */
+  --border: rgba(15, 20, 25, 0.1);
+  --border-strong: rgba(15, 20, 25, 0.18);
+
+  /* ----- Accent (Sky) ----- */
+  --accent: #0ea5e9;
+  --accent-fg: #ffffff;
+  --accent-soft: rgba(14, 165, 233, 0.12);
+  --accent-hover: #0284c7;
+
+  --focus: var(--accent);
+
+  /* ----- Semantic status ----- */
+  --success: #2f6e4b;
+  --warning: #b45309;
+  --danger: #b42318;
+}
+
+[data-theme='dark'] {
+  --bg: #0a0a0a; /* page background */
+  --surface-1: #141414; /* cards, panels, raised containers */
+  --surface-2: #1f1f1f; /* hover / chip / inline fill / nested */
+  --surface: var(--surface-1);
+  --backdrop: rgba(10, 10, 10, 0.85);
+
+  --ink: #fafafa;
+  --fg-1: #fafafa;
+  --fg-2: #bfbfbf;
+  --fg-3: #7a7a7a;
+  --fg-4: #555555;
+
+  --border: rgba(255, 255, 255, 0.1);
+  --border-strong: rgba(255, 255, 255, 0.18);
+
+  --accent: #0ea5e9;
+  --accent-fg: #ffffff;
+  --accent-soft: rgba(14, 165, 233, 0.18);
+  --accent-hover: #38bdf8;
+
+  --success: #4caf7a;
+  --warning: #e0a05a;
+  --danger: #e0635a;
+}
+
+/* ============================================================
+   Type, spacing, radius, motion
+   ============================================================ */
+:root {
+  --font-sans: 'Space Grotesk', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: 'Space Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  --fs-display: 52px;
+  --fs-h1: 36px;
+  --fs-h2: 28px;
+  --fs-h3: 20px;
+  --fs-h4: 17px;
+  --fs-body: 14.5px;
+  --fs-ui: 13.5px;
+  --fs-small: 12.5px;
+  --fs-micro: 10.5px;
+
+  --lh-display: 1;
+  --lh-heading: 1.15;
+  --lh-body: 1.55;
+  --lh-ui: 1.4;
+
+  --tr-display: -0.03em;
+  --tr-heading: -0.025em;
+  --tr-body: 0;
+  --tr-eyebrow: 0.1em;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --space-10: 128px;
+
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --radius-pill: 999px;
+
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --dur-fast: 140ms;
+  --dur-base: 200ms;
+  --dur-slow: 320ms;
+}
+
+/* ============================================================
+   Element defaults + global reset (from the prototype helmet)
+   ============================================================ */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg-1);
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  letter-spacing: var(--tr-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  transition:
+    background var(--dur-base) var(--ease-out),
+    color var(--dur-base) var(--ease-out);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-fg);
+}
+
+/* Accessible focus ring, per the design system interaction rules. */
+:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 3px var(--accent-soft),
+    0 0 0 1px var(--accent);
+  border-radius: var(--radius-sm);
+}
