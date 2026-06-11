@@ -1,0 +1,22 @@
+# Nuxt
+.nuxt
+.output
+.data
+dist
+
+# Dependencies
+node_modules
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Env / local
+.env
+.env.*
+!.env.example
+.DS_Store
+
+# Cache
+.cache
