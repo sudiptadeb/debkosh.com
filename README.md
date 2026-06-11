@@ -46,19 +46,19 @@ npm run generate   # static site → .output/public
 
 ## Deploy
 
-GitHub Actions (`.github/workflows/deploy.yml`) builds on every push to `main` or
-`claude/**` and deploys to the Cloudflare Pages project `debkosh-com`:
+Hosting is Cloudflare Workers (static assets, no server script), configured in
+`wrangler.toml` as the Worker `debkosh-com` serving `.output/public`. The repo is
+connected to Cloudflare Workers Builds, so every push to `main` triggers a build
+(`npm ci && npm run generate`) and a deploy on Cloudflare's side. No GitHub
+secrets needed.
 
-- `main` → production, https://debkosh-com.pages.dev
-- other branches → preview deployments
+A separate GitHub Actions workflow (`.github/workflows/generate.yml`) regenerates
+`.output/public` on pushes to `main` and commits it back into the repo for quick
+local viewing. It does not deploy.
 
-The workflow needs two repository secrets (Settings → Secrets and variables → Actions):
-`CLOUDFLARE_API_TOKEN` (custom token with Account → Cloudflare Pages → Edit) and
-`CLOUDFLARE_ACCOUNT_ID`. Without them it still builds and uploads the bundle as a
-workflow artifact, it just skips the deploy.
-
-Going live on the real domain is one click once you're ready:
-Cloudflare → Workers & Pages → debkosh-com → Custom domains → add `debkosh.com`.
+Going live on the real domain is one step once you're ready:
+Cloudflare → Workers & Pages → debkosh-com → Settings → Domains & Routes →
+add `debkosh.com` (DNS is auto-configured since the domain is on Cloudflare).
 
 ## Placeholders to replace
 
