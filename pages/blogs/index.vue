@@ -19,12 +19,20 @@
           Long-form on enterprise browsers, proxies, and enforcement. How it actually works, what
           the tradeoffs really cost. These are the canonical versions of what I post on LinkedIn.
         </p>
+        <input
+          v-model="query"
+          type="text"
+          class="masthead-search"
+          placeholder="Search posts"
+          aria-label="Search posts"
+        />
       </div>
     </section>
 
     <!-- POSTS -->
     <section class="posts">
       <div class="posts-inner">
+        <p v-if="groups.length === 0" class="posts-empty">No posts match "{{ query }}".</p>
         <template v-for="(group, idx) in groups" :key="group.year">
           <div class="year" :class="{ 'year-later': idx > 0 }">{{ group.year }}</div>
           <NuxtLink
@@ -67,10 +75,19 @@ const { data: posts } = await useAsyncData('blog-posts', () =>
   queryContent('/blog').sort({ date: -1 }).find(),
 )
 
+// Live client-side search query (title + summary, case-insensitive substring).
+const query = ref('')
+
 // Group posts by year, newest year first (posts already sorted desc).
 const groups = computed(() => {
+  const q = query.value.trim().toLowerCase()
+  const filtered = (posts.value ?? []).filter((post) => {
+    if (!q) return true
+    const haystack = `${post.title ?? ''} ${post.summary ?? ''}`.toLowerCase()
+    return haystack.includes(q)
+  })
   const byYear = new Map<number, any[]>()
-  for (const post of posts.value ?? []) {
+  for (const post of filtered) {
     const year = new Date(post.date).getUTCFullYear()
     if (!byYear.has(year)) byYear.set(year, [])
     byYear.get(year)!.push(post)
@@ -120,7 +137,7 @@ useSeoMeta({
 .masthead-inner {
   max-width: 880px;
   margin: 0 auto;
-  padding: 72px 40px 56px;
+  padding: 44px 40px 32px;
 }
 
 .eyebrow {
@@ -128,11 +145,11 @@ useSeoMeta({
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--fg-3);
-  margin-bottom: 22px;
+  margin-bottom: 14px;
 }
 
 .masthead-title {
-  font: 600 44px/1.05 var(--font-sans);
+  font: 600 32px/1.05 var(--font-sans);
   letter-spacing: -0.035em;
   color: var(--fg-1);
   margin: 0;
@@ -141,10 +158,27 @@ useSeoMeta({
 }
 
 .masthead-sub {
-  font: 400 15.5px/1.6 var(--font-sans);
+  font: 400 14px/1.6 var(--font-sans);
   color: var(--fg-2);
-  margin: 18px 0 0;
+  margin: 12px 0 0;
   max-width: 600px;
+}
+
+.masthead-search {
+  display: block;
+  width: 100%;
+  max-width: 340px;
+  margin-top: 20px;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  background: var(--surface-1);
+  border-radius: var(--radius-md);
+  font: 400 12.5px/1.4 var(--font-mono);
+  color: var(--fg-1);
+}
+
+.masthead-search::placeholder {
+  color: var(--fg-3);
 }
 
 .posts {
@@ -154,7 +188,13 @@ useSeoMeta({
 .posts-inner {
   max-width: 880px;
   margin: 0 auto;
-  padding: 48px 40px 0;
+  padding: 28px 40px 0;
+}
+
+.posts-empty {
+  font: 400 13px/1.5 var(--font-sans);
+  color: var(--fg-3);
+  margin: 0;
 }
 
 .year {
@@ -165,14 +205,14 @@ useSeoMeta({
 }
 
 .year-later {
-  margin-top: 40px;
+  margin-top: 26px;
 }
 
 .post-row {
   display: grid;
   grid-template-columns: 92px 1fr;
   gap: 24px;
-  padding: 22px 14px;
+  padding: 13px 12px;
   border-top: 1px solid var(--border);
   align-items: baseline;
   text-decoration: none;
@@ -201,7 +241,7 @@ useSeoMeta({
 }
 
 .post-title {
-  font: 600 17px/1.35 var(--font-sans);
+  font: 600 15.5px/1.35 var(--font-sans);
   color: var(--fg-1);
   letter-spacing: -0.015em;
 }
@@ -218,9 +258,9 @@ useSeoMeta({
 }
 
 .post-sum {
-  font: 400 13.5px/1.55 var(--font-sans);
+  font: 400 13px/1.55 var(--font-sans);
   color: var(--fg-2);
-  margin: 6px 0 0;
+  margin: 4px 0 0;
   max-width: 600px;
 }
 
@@ -228,7 +268,7 @@ useSeoMeta({
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-top: 32px;
+  margin-top: 22px;
   font: 400 12px/1.5 var(--font-mono);
   color: var(--fg-3);
   flex-wrap: wrap;
@@ -252,7 +292,7 @@ useSeoMeta({
   }
 
   .masthead-title {
-    font-size: clamp(32px, 8vw, 44px);
+    font-size: clamp(26px, 7vw, 32px);
   }
 
   .post-row {

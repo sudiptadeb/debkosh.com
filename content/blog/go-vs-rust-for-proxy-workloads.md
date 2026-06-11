@@ -1,7 +1,7 @@
 ---
 title: 'Go vs Rust for proxy workloads: the choice and why'
 heading: Go vs Rust for proxy workloads
-date: 2025-08-19
+date: 2025-09-24
 minutes: 6
 summary: We pushed serious TLS traffic through both. The decision came down to GC pauses you can budget for versus lifetimes you pay for daily.
 short: We prototyped the gateway data plane in both. Rust won the benchmarks by less than expected, Go won the product, and the difference was whose costs show up on whose schedule.

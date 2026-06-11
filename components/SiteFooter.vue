@@ -26,7 +26,7 @@ withDefaults(
 <style scoped>
 .ftr {
   border-top: 1px solid var(--border);
-  padding: 36px 0 56px;
+  padding: 24px 0 36px;
 }
 
 .ftr-inner {

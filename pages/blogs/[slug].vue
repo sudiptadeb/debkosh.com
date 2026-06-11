@@ -47,6 +47,19 @@
         </span>
         <Icon name="arrow-right" :size="16" stroke="var(--fg-3)" />
       </NuxtLink>
+
+      <nav class="post-nav">
+        <NuxtLink v-if="older" :to="postRoute(older)" class="nav-card">
+          <span class="nav-label">Older</span>
+          <span class="nav-title">{{ older.heading || older.title }}</span>
+        </NuxtLink>
+        <span v-else></span>
+        <NuxtLink v-if="newer" :to="postRoute(newer)" class="nav-card nav-card-right">
+          <span class="nav-label">Newer</span>
+          <span class="nav-title">{{ newer.heading || newer.title }}</span>
+        </NuxtLink>
+        <span v-else></span>
+      </nav>
     </article>
 
     <SiteFooter :max-width="760" label="blog.debkosh.com" :margin-top="72">
@@ -77,6 +90,24 @@ const { data: next } = await useAsyncData(`post-next-${slug}`, async () => {
     .find()
   return matches[0] ?? null
 })
+
+// Prev/next across all posts by date (newest first). Uses find() so empty
+// neighbours never 404 during prerendering; everything is guarded with v-if.
+const { data: neighbours } = await useAsyncData(`post-nav-${slug}`, async () => {
+  const all = await queryContent('/blog')
+    .only(['_path', 'title', 'heading', 'date'])
+    .sort({ date: -1 })
+    .find()
+  const i = all.findIndex(p => p._path === post.value?._path)
+  if (i === -1) return { newer: null, older: null }
+  return {
+    newer: i > 0 ? all[i - 1] : null,
+    older: i < all.length - 1 ? all[i + 1] : null,
+  }
+})
+
+const newer = computed(() => neighbours.value?.newer ?? null)
+const older = computed(() => neighbours.value?.older ?? null)
 
 const eyebrow = computed(() => {
   if (post.value?.series && post.value?.part) {
@@ -142,7 +173,7 @@ useSeoMeta({
 .article {
   max-width: 760px;
   margin: 0 auto;
-  padding: 64px 40px 0;
+  padding: 44px 40px 0;
 }
 
 .article-eyebrow {
@@ -157,7 +188,7 @@ useSeoMeta({
 }
 
 .article-title {
-  font: 600 40px/1.1 var(--font-sans);
+  font: 600 30px/1.1 var(--font-sans);
   letter-spacing: -0.035em;
   color: var(--fg-1);
   margin: 0;
@@ -168,8 +199,8 @@ useSeoMeta({
   display: flex;
   flex-wrap: wrap;
   gap: 18px;
-  margin-top: 18px;
-  padding-bottom: 28px;
+  margin-top: 12px;
+  padding-bottom: 18px;
   border-bottom: 1px solid var(--border);
   font: 400 12px/1 var(--font-mono);
   color: var(--fg-3);
@@ -180,8 +211,8 @@ useSeoMeta({
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   background: var(--surface-1);
-  padding: 18px 22px;
-  margin-top: 32px;
+  padding: 14px 18px;
+  margin-top: 22px;
 }
 
 .short-label {
@@ -199,7 +230,7 @@ useSeoMeta({
 }
 
 .article-body {
-  margin-top: 32px;
+  margin-top: 24px;
 }
 
 .article-stub {
@@ -212,8 +243,8 @@ useSeoMeta({
   display: flex;
   align-items: center;
   gap: 14px;
-  margin-top: 48px;
-  padding-top: 24px;
+  margin-top: 32px;
+  padding-top: 18px;
   border-top: 1px solid var(--border);
   font: 400 12px/1.5 var(--font-mono);
   color: var(--fg-3);
@@ -238,8 +269,8 @@ useSeoMeta({
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   background: var(--surface-1);
-  padding: 20px 24px;
-  margin-top: 20px;
+  padding: 16px 20px;
+  margin-top: 12px;
   text-decoration: none;
   transition: border-color var(--dur-fast) var(--ease-out);
 }
@@ -267,13 +298,57 @@ useSeoMeta({
   letter-spacing: -0.015em;
 }
 
+.post-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.nav-card {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface-1);
+  padding: 14px 18px;
+  text-decoration: none;
+  transition: border-color var(--dur-fast) var(--ease-out);
+}
+
+.nav-card:hover {
+  border-color: var(--accent);
+}
+
+.nav-card-right {
+  text-align: right;
+}
+
+.nav-label {
+  font: 500 9.5px/1 var(--font-mono);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--fg-3);
+}
+
+.nav-title {
+  font: 600 13.5px/1.3 var(--font-sans);
+  color: var(--fg-1);
+  letter-spacing: -0.01em;
+}
+
 @media (max-width: 640px) {
   .article {
-    padding: 48px 20px 0;
+    padding: 36px 20px 0;
   }
 
   .article-title {
-    font-size: clamp(28px, 7.5vw, 40px);
+    font-size: clamp(24px, 6.5vw, 30px);
+  }
+
+  .post-nav {
+    grid-template-columns: 1fr;
   }
 }
 </style>

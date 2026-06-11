@@ -1,7 +1,7 @@
 ---
 title: 'The extension ceiling, part 3: the incognito bypass'
 heading: The incognito bypass
-date: 2026-05-14
+date: 2026-05-28
 minutes: 5
 series: The extension ceiling
 part: 3

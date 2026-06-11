@@ -1,7 +1,7 @@
 ---
 title: 'The extension ceiling, part 2: Chrome sync and MDM scoping'
 heading: Chrome sync and MDM scoping
-date: 2026-03-03
+date: 2026-04-09
 minutes: 6
 series: The extension ceiling
 part: 2

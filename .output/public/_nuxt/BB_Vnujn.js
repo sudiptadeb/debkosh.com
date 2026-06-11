@@ -1,0 +1,1 @@
+import{_ as o}from"./DlAUqK2U.js";import{o as t,c as r,B as s}from"./BcpkWahW.js";const a={},c={class:"page-root"};function n(e,_){return t(),r("div",c,[s(e.$slots,"default",{},void 0,!0)])}const l=o(a,[["render",n],["__scopeId","data-v-4b117b67"]]);export{l as default};

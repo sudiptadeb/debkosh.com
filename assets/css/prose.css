@@ -17,15 +17,15 @@
 }
 
 .prose-deb p {
-  font: 400 16px/1.7 var(--font-sans);
+  font: 400 15px/1.65 var(--font-sans);
   color: var(--fg-1);
 }
 
 .prose-deb h2 {
-  font: 600 23px/1.25 var(--font-sans);
+  font: 600 20px/1.25 var(--font-sans);
   letter-spacing: -0.02em;
   color: var(--fg-1);
-  margin-top: 44px;
+  margin-top: 34px;
 }
 
 .prose-deb h3 {
@@ -71,7 +71,7 @@
 }
 
 .prose-deb li {
-  font: 400 16px/1.7 var(--font-sans);
+  font: 400 15px/1.65 var(--font-sans);
   color: var(--fg-1);
 }
 
@@ -95,7 +95,7 @@
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   overflow: hidden;
-  margin-top: 28px;
+  margin-top: 22px;
 }
 
 .prose-deb th {

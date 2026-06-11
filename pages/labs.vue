@@ -128,7 +128,7 @@ useSeoMeta({
 .masthead-inner {
   max-width: 1040px;
   margin: 0 auto;
-  padding: 72px 40px 48px;
+  padding: 44px 40px 30px;
 }
 
 .eyebrow {
@@ -136,11 +136,11 @@ useSeoMeta({
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--fg-3);
-  margin-bottom: 22px;
+  margin-bottom: 14px;
 }
 
 .masthead-title {
-  font: 600 44px/1.05 var(--font-sans);
+  font: 600 32px/1.05 var(--font-sans);
   letter-spacing: -0.035em;
   color: var(--fg-1);
   margin: 0;
@@ -149,16 +149,16 @@ useSeoMeta({
 }
 
 .masthead-sub {
-  font: 400 15.5px/1.6 var(--font-sans);
+  font: 400 14px/1.6 var(--font-sans);
   color: var(--fg-2);
-  margin: 18px 0 0;
+  margin: 12px 0 0;
   max-width: 600px;
 }
 
 .legend {
   display: flex;
   gap: 24px;
-  margin-top: 26px;
+  margin-top: 18px;
   font: 400 11.5px/1 var(--font-mono);
   color: var(--fg-3);
   letter-spacing: 0.02em;
@@ -182,18 +182,18 @@ useSeoMeta({
 .ledger {
   max-width: 1040px;
   margin: 0 auto;
-  padding: 56px 40px 0;
+  padding: 30px 40px 0;
 }
 
 .ledger-head-row {
   display: flex;
   align-items: baseline;
   gap: 14px;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .ledger-title {
-  font: 600 22px/1 var(--font-sans);
+  font: 600 18px/1 var(--font-sans);
   letter-spacing: -0.02em;
   color: var(--fg-1);
   margin: 0;
@@ -230,7 +230,7 @@ useSeoMeta({
 
 .table-row {
   align-items: baseline;
-  padding: 18px 14px;
+  padding: 12px 14px;
   border-bottom: 1px solid var(--border);
   border-radius: var(--radius-md);
   transition: background var(--dur-fast) var(--ease-out);
@@ -247,7 +247,7 @@ useSeoMeta({
 }
 
 .project-name {
-  font: 600 15px/1.2 var(--font-sans);
+  font: 600 14px/1.2 var(--font-sans);
   letter-spacing: -0.02em;
   color: var(--fg-1);
 }
@@ -263,7 +263,7 @@ useSeoMeta({
 }
 
 .cell-desc {
-  font: 400 13px/1.5 var(--font-sans);
+  font: 400 12.5px/1.5 var(--font-sans);
   color: var(--fg-2);
 }
 
@@ -295,7 +295,7 @@ useSeoMeta({
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-top: 28px;
+  margin-top: 20px;
   font: 400 12px/1.5 var(--font-mono);
   color: var(--fg-3);
   flex-wrap: wrap;
@@ -334,7 +334,7 @@ useSeoMeta({
   }
 
   .masthead-title {
-    font-size: clamp(32px, 8vw, 44px);
+    font-size: clamp(26px, 7vw, 32px);
   }
 }
 </style>

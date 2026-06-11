@@ -18,7 +18,7 @@
         <div>
           <div class="hero-eyebrow">
             <span class="hero-dot" />
-            Sudipta Deb · Chennai
+            Sudipta Deb · India
           </div>
           <h1 class="hero-title">
             I <span class="hero-accent">build</span> the things I couldn't find, and write the
@@ -345,7 +345,7 @@
       <div class="sec-inner">
         <div class="sec-head sec-head-spaced">
           <h2 class="sec-title">A bit about me</h2>
-          <span class="sec-aside">Based in Chennai</span>
+          <span class="sec-aside">Based in India</span>
         </div>
         <div class="about-row">
           <img src="/images/avatar.jpg" alt="Sudipta Deb" class="about-avatar" />
@@ -373,7 +373,7 @@
       </div>
     </section>
 
-    <SiteFooter :max-width="1080" label="debkosh.com" :margin-top="96">
+    <SiteFooter :max-width="1080" label="debkosh.com" :margin-top="56">
       <NuxtLink to="/blogs">blog</NuxtLink>
       <NuxtLink to="/labs">lab</NuxtLink>
       <a href="https://github.com/sudiptadeb" target="_blank" rel="noopener">github</a>
@@ -430,10 +430,10 @@ useSeoMeta({
 .hero-inner {
   max-width: 1080px;
   margin: 0 auto;
-  padding: 84px 40px 64px;
+  padding: 52px 40px 44px;
   display: grid;
   grid-template-columns: 1.55fr 1fr;
-  gap: 56px;
+  gap: 48px;
   align-items: end;
 }
 
@@ -445,7 +445,7 @@ useSeoMeta({
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--fg-3);
-  margin-bottom: 26px;
+  margin-bottom: 18px;
 }
 
 .hero-dot {
@@ -456,12 +456,12 @@ useSeoMeta({
 }
 
 .hero-title {
-  font: 600 56px/1.02 var(--font-sans);
-  letter-spacing: -0.04em;
+  font: 600 42px/1.05 var(--font-sans);
+  letter-spacing: -0.035em;
   color: var(--fg-1);
   margin: 0;
   text-wrap: balance;
-  max-width: 780px;
+  max-width: 680px;
 }
 
 .hero-accent {
@@ -469,17 +469,17 @@ useSeoMeta({
 }
 
 .hero-sub {
-  font: 400 16.5px/1.55 var(--font-sans);
+  font: 400 15px/1.55 var(--font-sans);
   color: var(--fg-2);
-  margin: 22px 0 0;
+  margin: 16px 0 0;
   max-width: 600px;
 }
 
 .hero-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 22px;
-  margin-top: 32px;
+  gap: 20px;
+  margin-top: 22px;
 }
 
 .hero-link {
@@ -521,7 +521,7 @@ useSeoMeta({
   justify-content: space-between;
   align-items: center;
   gap: 16px;
-  padding: 11px 0;
+  padding: 9px 0;
   border-bottom: 1px solid var(--border);
 }
 
@@ -554,7 +554,7 @@ useSeoMeta({
 .sec-inner {
   max-width: 1080px;
   margin: 0 auto;
-  padding: 80px 40px 0;
+  padding: 52px 40px 0;
 }
 
 .sec {
@@ -565,17 +565,17 @@ useSeoMeta({
   display: flex;
   align-items: baseline;
   gap: 14px;
-  margin-bottom: 18px;
-  padding-bottom: 14px;
+  margin-bottom: 14px;
+  padding-bottom: 11px;
   border-bottom: 1px solid var(--border);
 }
 
 .sec-head-spaced {
-  margin-bottom: 28px;
+  margin-bottom: 20px;
 }
 
 .sec-title {
-  font: 600 26px/1 var(--font-sans);
+  font: 600 22px/1 var(--font-sans);
   letter-spacing: -0.025em;
   color: var(--fg-1);
   margin: 0;
@@ -589,9 +589,9 @@ useSeoMeta({
 }
 
 .sec-lede {
-  font: 400 16px/1.55 var(--font-sans);
+  font: 400 15px/1.55 var(--font-sans);
   color: var(--fg-2);
-  margin: 0 0 28px;
+  margin: 0 0 20px;
   max-width: 620px;
 }
 
@@ -600,10 +600,10 @@ useSeoMeta({
   border: 1px solid var(--border-strong);
   border-radius: var(--radius-xl);
   background: var(--surface-1);
-  padding: 40px;
+  padding: 28px;
   display: grid;
   grid-template-columns: 1fr 1.05fr;
-  gap: 44px;
+  gap: 32px;
   align-items: center;
 }
 
@@ -622,37 +622,37 @@ useSeoMeta({
 }
 
 .flagship-name {
-  font: 600 34px/1 var(--font-sans);
-  letter-spacing: -0.035em;
+  font: 600 28px/1 var(--font-sans);
+  letter-spacing: -0.03em;
   color: var(--fg-1);
   margin: 0;
 }
 
 .flagship-tagline {
-  font: 500 17px/1.4 var(--font-sans);
+  font: 500 15.5px/1.4 var(--font-sans);
   color: var(--fg-1);
-  margin: 14px 0 0;
+  margin: 10px 0 0;
 }
 
 .flagship-body {
-  font: 400 14px/1.6 var(--font-sans);
+  font: 400 13.5px/1.55 var(--font-sans);
   color: var(--fg-2);
-  margin: 12px 0 0;
+  margin: 8px 0 0;
   max-width: 520px;
 }
 
 .flagship-stack {
-  font: 400 11.5px/1.6 var(--font-mono);
+  font: 400 11px/1.6 var(--font-mono);
   color: var(--fg-3);
   letter-spacing: 0.01em;
-  margin-top: 18px;
+  margin-top: 12px;
 }
 
 .flagship-links {
   display: flex;
   gap: 9px;
   flex-wrap: wrap;
-  margin-top: 22px;
+  margin-top: 16px;
 }
 
 .flagship-btn {
@@ -696,8 +696,8 @@ useSeoMeta({
 .cards-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 14px;
-  margin-top: 14px;
+  gap: 12px;
+  margin-top: 12px;
 }
 
 .card {
@@ -730,10 +730,10 @@ useSeoMeta({
 }
 
 .card-body {
-  padding: 24px;
+  padding: 18px;
   display: flex;
   flex-direction: column;
-  gap: 11px;
+  gap: 9px;
   flex: 1;
 }
 
@@ -795,10 +795,10 @@ useSeoMeta({
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   background: transparent;
-  padding: 24px;
+  padding: 18px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
 }
 
 .more-head {
@@ -859,16 +859,16 @@ useSeoMeta({
 }
 
 .work-lead {
-  font: 400 16px/1.6 var(--font-sans);
+  font: 400 15px/1.6 var(--font-sans);
   color: var(--fg-1);
   margin: 0;
   max-width: 600px;
 }
 
 .work-body {
-  font: 400 14.5px/1.6 var(--font-sans);
+  font: 400 13.5px/1.6 var(--font-sans);
   color: var(--fg-2);
-  margin: 18px 0 0;
+  margin: 12px 0 0;
   max-width: 600px;
 }
 
@@ -880,7 +880,7 @@ useSeoMeta({
   color: var(--accent);
   text-decoration: none;
   letter-spacing: -0.005em;
-  margin-top: 26px;
+  margin-top: 18px;
   transition: color var(--dur-fast) var(--ease-out);
 }
 
@@ -898,7 +898,7 @@ useSeoMeta({
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   background: var(--surface-1);
-  padding: 18px 20px;
+  padding: 14px 16px;
 }
 
 .seat-label {
@@ -917,8 +917,8 @@ useSeoMeta({
 .chips {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 32px;
+  gap: 7px;
+  margin-top: 22px;
 }
 
 .chip {
@@ -933,21 +933,21 @@ useSeoMeta({
 
 /* ----- write ----- */
 .write-lede {
-  font: 400 16px/1.6 var(--font-sans);
+  font: 400 15px/1.6 var(--font-sans);
   color: var(--fg-1);
-  margin: 0 0 8px;
+  margin: 0 0 4px;
   max-width: 640px;
 }
 
 .write-list {
-  margin-top: 24px;
+  margin-top: 16px;
 }
 
 .write-row {
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 22px;
-  padding: 20px 14px;
+  padding: 13px 12px;
   border-top: 1px solid var(--border);
   align-items: baseline;
   text-decoration: none;
@@ -970,9 +970,9 @@ useSeoMeta({
 }
 
 .write-sum {
-  font: 400 13.5px/1.55 var(--font-sans);
+  font: 400 13px/1.5 var(--font-sans);
   color: var(--fg-2);
-  margin: 5px 0 0;
+  margin: 4px 0 0;
   max-width: 640px;
 }
 
@@ -986,7 +986,7 @@ useSeoMeta({
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 14px;
-  margin-top: 32px;
+  margin-top: 22px;
 }
 
 .write-where {
@@ -1075,8 +1075,8 @@ useSeoMeta({
 }
 
 .about-avatar {
-  width: 62px;
-  height: 62px;
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
   border: 1px solid var(--border);
   object-fit: cover;
@@ -1085,7 +1085,7 @@ useSeoMeta({
 }
 
 .about-text {
-  font: 400 17px/1.6 var(--font-sans);
+  font: 400 15px/1.6 var(--font-sans);
   color: var(--fg-1);
   margin: 0;
   max-width: 620px;
@@ -1097,7 +1097,7 @@ useSeoMeta({
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 32px;
+  margin-top: 22px;
   align-items: center;
 }
 
@@ -1149,7 +1149,7 @@ useSeoMeta({
   }
 
   .hero-title {
-    font-size: clamp(36px, 7.5vw, 56px);
+    font-size: clamp(32px, 6.5vw, 42px);
   }
 
   .work-grid {

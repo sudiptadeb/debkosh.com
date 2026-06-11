@@ -1,7 +1,7 @@
 ---
 title: 'The extension ceiling, part 1: mandatory screen recording'
 heading: Mandatory screen recording
-date: 2026-01-20
+date: 2026-02-17
 minutes: 7
 series: The extension ceiling
 part: 1
