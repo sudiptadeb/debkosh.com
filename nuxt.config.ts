@@ -54,7 +54,12 @@ export default defineNuxtConfig({
   },
 
   // Static generation: prerender every page, follow links to find blog posts.
+  // The preset is pinned to `static` so Nitro does not auto-detect Cloudflare
+  // Workers Builds and switch to its server preset, which generates a redirected
+  // wrangler config expecting a server entry-point and breaks `wrangler deploy`
+  // of the assets-only Worker defined in wrangler.toml.
   nitro: {
+    preset: 'static',
     prerender: {
       crawlLinks: true,
       routes: ['/', '/blogs', '/labs'],
