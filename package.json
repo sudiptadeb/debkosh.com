@@ -7,7 +7,8 @@
     "build": "nuxt build",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "og": "node scripts/generate-og.mjs"
   },
   "dependencies": {
     "@nuxt/content": "^2.13.4",
@@ -16,5 +17,11 @@
     "nuxt": "^3.14.1592",
     "vue": "^3.5.13",
     "vue-router": "^4.5.0"
+  },
+  "devDependencies": {
+    "@resvg/resvg-js": "^2.6.2",
+    "gray-matter": "^4.0.3",
+    "satori": "^0.28.0",
+    "sharp": "^0.35.3"
   }
 }
