@@ -1,0 +1,32 @@
+# Sudipta Deb (debkosh.com)
+
+Personal site of Sudipta Deb, who leads Ulaa — a Chromium-based enterprise
+browser — and its built-in SASE stack, and builds developer tools on the
+side. The blog is long-form writing on enterprise browser security,
+proxies, and enforcement mechanics: how things actually work and what the
+tradeoffs really cost.
+
+## Main pages
+
+- [Home](https://debkosh.com/)
+- [Blog](https://debkosh.com/blogs)
+- [Lab (projects)](https://debkosh.com/labs)
+- [RSS feed](https://debkosh.com/rss.xml)
+
+## Projects
+
+- [memd](https://github.com/sudiptadeb/memd): file-first memory for AI
+  agents — markdown files you own and version. Also at
+  https://memd.debkosh.com
+- [termulaa](https://github.com/sudiptadeb/termulaa): terminal and coding
+  agents in a browser tab, with sessions that survive the tab closing.
+- [keysat](https://github.com/sudiptadeb/keysat): local-first keystroke
+  and activity tracking for macOS; never leaves the machine.
+- [sackup](https://github.com/sudiptadeb/sackup): phone backup to a USB
+  drive — offline, resumable, verified.
+
+## Contact
+
+- Email: hello@debkosh.com
+- GitHub: https://github.com/sudiptadeb
+- LinkedIn: https://linkedin.com/in/-sudiptadeb

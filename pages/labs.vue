@@ -2,7 +2,7 @@
   <div>
     <SiteHeader :max-width="1040" nav-gap="16px">
       <template #brand>
-        <SiteBrand domain="lab.debkosh.com" />
+        <SiteBrand domain="debkosh.com/labs" />
       </template>
       <template #nav>
         <NuxtLink to="/" class="nav-link">debkosh.com</NuxtLink>
@@ -14,10 +14,10 @@
     <section class="masthead">
       <div class="masthead-inner">
         <div class="eyebrow">The lab</div>
-        <h1 class="masthead-title">Everything I've built, indexed.</h1>
+        <h1 class="masthead-title">The tools I keep running.</h1>
         <p class="masthead-sub">
-          The maintained tools, indexed. Each entry is real, builds, and did the job I made it for.
-          Experiments get added once they're worth showing.
+          Each entry is real, builds, and did the job I made it for. Experiments graduate here
+          once they're worth showing.
         </p>
         <div class="legend">
           <span class="legend-item"><span class="legend-dot" />Maintained</span>
@@ -62,7 +62,7 @@
       </div>
     </section>
 
-    <SiteFooter :max-width="1040" label="lab.debkosh.com" :margin-top="72">
+    <SiteFooter :max-width="1040" label="debkosh.com/labs" :margin-top="72">
       <NuxtLink to="/">debkosh.com</NuxtLink>
       <NuxtLink to="/blogs">blog</NuxtLink>
       <a href="https://github.com/sudiptadeb" target="_blank" rel="noopener">github</a>
@@ -104,7 +104,13 @@ useSeoMeta({
   description:
     'The maintained tools, indexed: memd, termulaa, keysat, and sackup. Each entry is real, builds, and did the job it was made for.',
   ogTitle: 'The lab · Sudipta Deb',
-  ogDescription: 'Everything I\'ve built, indexed.',
+  ogDescription: 'The tools I keep running.',
+  ogImage: 'https://debkosh.com/og/default.png',
+  ogUrl: 'https://debkosh.com/labs',
+})
+
+useHead({
+  link: [{ rel: 'canonical', href: 'https://debkosh.com/labs' }],
 })
 </script>
 

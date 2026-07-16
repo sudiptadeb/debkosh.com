@@ -4,7 +4,7 @@
       <template #brand>
         <NuxtLink to="/blogs" class="back-link">
           <Icon name="arrow-left" :size="14" />
-          blog.debkosh.com
+          debkosh.com/blogs
         </NuxtLink>
       </template>
       <template #nav>
@@ -62,7 +62,7 @@
       </nav>
     </article>
 
-    <SiteFooter :max-width="760" label="blog.debkosh.com" :margin-top="72">
+    <SiteFooter :max-width="760" label="debkosh.com/blogs" :margin-top="72">
       <NuxtLink to="/blogs">all posts</NuxtLink>
       <NuxtLink to="/">debkosh.com</NuxtLink>
     </SiteFooter>
@@ -129,14 +129,42 @@ function longDate(date: string) {
   })
 }
 
+const canonicalUrl = `https://debkosh.com/blogs/${slug}`
+const ogImageUrl = `https://debkosh.com/og/${slug}.png`
+
 useSeoMeta({
   title: post.value.title,
   description: post.value.summary,
   ogTitle: post.value.title,
   ogDescription: post.value.summary,
   ogType: 'article',
+  ogImage: ogImageUrl,
+  ogUrl: canonicalUrl,
   articlePublishedTime: new Date(post.value.date).toISOString(),
   articleAuthor: ['Sudipta Deb'],
+})
+
+useHead({
+  link: [{ rel: 'canonical', href: canonicalUrl }],
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'BlogPosting',
+        headline: post.value.title,
+        description: post.value.summary,
+        datePublished: new Date(post.value.date).toISOString(),
+        author: {
+          '@type': 'Person',
+          name: 'Sudipta Deb',
+          url: 'https://debkosh.com',
+        },
+        image: ogImageUrl,
+        mainEntityOfPage: canonicalUrl,
+      }),
+    },
+  ],
 })
 </script>
 

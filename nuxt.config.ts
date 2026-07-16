@@ -40,14 +40,27 @@ export default defineNuxtConfig({
       ],
       link: [
         { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+        // Self-hosted fonts (see assets/css/tokens.css @font-face). Preload the
+        // two above-the-fold faces; Space Mono 700 loads on demand.
         {
-          rel: 'preconnect',
-          href: 'https://fonts.googleapis.com',
+          rel: 'preload',
+          as: 'font',
+          type: 'font/woff2',
+          href: '/fonts/space-grotesk-var.woff2',
+          crossorigin: '',
         },
         {
-          rel: 'preconnect',
-          href: 'https://fonts.gstatic.com',
+          rel: 'preload',
+          as: 'font',
+          type: 'font/woff2',
+          href: '/fonts/space-mono-400.woff2',
           crossorigin: '',
+        },
+        {
+          rel: 'alternate',
+          type: 'application/rss+xml',
+          title: 'Sudipta Deb · blog',
+          href: '/rss.xml',
         },
       ],
     },
@@ -62,7 +75,7 @@ export default defineNuxtConfig({
     preset: 'static',
     prerender: {
       crawlLinks: true,
-      routes: ['/', '/blogs', '/labs'],
+      routes: ['/', '/blogs', '/labs', '/rss.xml'],
     },
   },
 })

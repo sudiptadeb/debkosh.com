@@ -56,7 +56,7 @@
           <div class="meta-row"><span>Building</span><span class="meta-val meta-accent">memd</span></div>
           <div class="meta-row">
             <span>Writing</span>
-            <NuxtLink to="/blogs" class="meta-val meta-link">blog.debkosh.com</NuxtLink>
+            <NuxtLink to="/blogs" class="meta-val meta-link">debkosh.com/blogs</NuxtLink>
           </div>
           <div class="meta-row meta-last"><span>Résumé</span><span class="meta-val">on request</span></div>
         </div>
@@ -79,7 +79,7 @@
           <div>
             <div class="flagship-pill">Flagship</div>
             <h3 class="flagship-name">memd</h3>
-            <p class="flagship-tagline">Unified, file-first memory for AI agents.</p>
+            <p class="flagship-tagline">Teach it once, every agent knows it.</p>
             <p class="flagship-body">
               The memory is a set of Markdown files the agent reads and maintains. You own them,
               version them in Git, and carry them between tools. The server is only an adapter, the
@@ -101,7 +101,7 @@
           </div>
           <div class="flagship-media">
             <img
-              src="/images/memd.gif"
+              src="/images/memd.webp"
               alt="memd, an agent reading and maintaining its Markdown memory files"
               loading="lazy"
             />
@@ -113,7 +113,7 @@
           <div class="card card-media">
             <div class="card-img">
               <img
-                src="/images/termulaa-hero.png"
+                src="/images/termulaa-hero.webp"
                 alt="termulaa, a coding agent and a streaming log in a single split terminal"
                 loading="lazy"
               />
@@ -141,7 +141,7 @@
           <div class="card card-media">
             <div class="card-img">
               <img
-                src="/images/keysat-overview.png"
+                src="/images/keysat-overview.webp"
                 alt="keysat, the overview dashboard, built on the Deb Design System"
                 loading="lazy"
               />
@@ -193,8 +193,8 @@
               <span class="more-sub">Smaller builds and experiments.</span>
             </div>
             <p class="more-body">
-              Chrome sync analyzer, a Chrome Enterprise URL-pattern matcher, SmolLM3-3B
-              fine-tuning, a child-learning kiosk, thermal receipt printing.
+              A Chrome sync analyzer, a Chrome Enterprise URL-pattern matcher, a child-learning
+              kiosk.
             </p>
             <div class="more-links">
               <NuxtLink to="/labs" class="more-link">
@@ -231,7 +231,7 @@
               hard parts are written up, not bulleted here.
             </p>
             <NuxtLink to="/blogs" class="work-blog-link">
-              Deep-dives at blog.debkosh.com <Icon name="arrow-right" :size="14" />
+              Deep-dives on the blog <Icon name="arrow-right" :size="14" />
             </NuxtLink>
           </div>
           <div class="work-seats">
@@ -270,29 +270,35 @@
               <div class="write-title">The extension ceiling</div>
               <p class="write-sum">
                 Where browser-extension security tooling hits its limits: mandatory screen
-                recording, Chrome sync MDM scoping, incognito bypass.
+                recording, Chrome sync MDM scoping, incognito bypass, DLP on the page vs the wire.
               </p>
             </div>
-            <span class="write-tag">SERIES · 3 PARTS</span>
+            <span class="write-tag">SERIES · 4 PARTS</span>
           </NuxtLink>
-          <NuxtLink to="/blogs" class="write-row">
+          <NuxtLink to="/blogs/enterprise-browser-pam-collision" class="write-row">
             <div>
-              <div class="write-title">Browser + SASE consolidation</div>
+              <div class="write-title">The enterprise browser and PAM are on a collision course</div>
+              <p class="write-sum">
+                Two categories holding half of the same buyer's problem. Whoever closes the gap
+                wins more than the extension argument.
+              </p>
+            </div>
+            <span />
+          </NuxtLink>
+          <NuxtLink to="/blogs/why-rdp-cant-authenticate-like-ssh" class="write-row">
+            <div>
+              <div class="write-title">Why RDP can't authenticate like SSH</div>
+              <p class="write-sum">
+                SSH solved short-lived, identity-attributed access with a one-page config. RDP
+                needs an Active Directory project. The gap is structural.
+              </p>
+            </div>
+            <span />
+          </NuxtLink>
+          <NuxtLink to="/blogs/merging-the-browser-and-the-sase-stack" class="write-row write-row-last">
+            <div>
+              <div class="write-title">Merging the browser and the SASE stack</div>
               <p class="write-sum">What enforcement actually looks like when you merge them.</p>
-            </div>
-            <span />
-          </NuxtLink>
-          <NuxtLink to="/blogs" class="write-row">
-            <div>
-              <div class="write-title">Go vs Rust for proxy workloads</div>
-              <p class="write-sum">The choice and why.</p>
-            </div>
-            <span />
-          </NuxtLink>
-          <NuxtLink to="/blogs" class="write-row write-row-last">
-            <div>
-              <div class="write-title">Enterprise browser metrics</div>
-              <p class="write-sum">What productivity numbers really mean.</p>
             </div>
             <span />
           </NuxtLink>
@@ -303,7 +309,7 @@
             <div class="write-foot-label">Where it lives</div>
             <p class="write-foot-body">
               LinkedIn is where these get posted and reach the enterprise-browser-security crowd.
-              blog.debkosh.com holds the canonical long-form versions.
+              The canonical long-form versions live here, at debkosh.com/blogs.
             </p>
             <NuxtLink to="/blogs" class="write-foot-link">
               Read the blog <Icon name="arrow-right" :size="13" />
@@ -312,7 +318,7 @@
           <div class="write-press">
             <div class="write-foot-label write-press-label">Featured / press</div>
             <a
-              href="https://www.linkedin.com/in/-sudiptadeb"
+              href="https://ulaa.com/enterprise/blogs/browsers-new-endpoint.html"
               target="_blank"
               rel="noopener"
               class="press-card"
@@ -400,6 +406,30 @@ useSeoMeta({
   ogTitle: 'Sudipta Deb · debkosh.com',
   ogDescription:
     'I build the things I couldn\'t find, and write the things whitepapers won\'t.',
+  ogImage: 'https://debkosh.com/og/default.png',
+  ogUrl: 'https://debkosh.com/',
+})
+
+useHead({
+  link: [{ rel: 'canonical', href: 'https://debkosh.com/' }],
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Person',
+        name: 'Sudipta Deb',
+        url: 'https://debkosh.com',
+        sameAs: [
+          'https://github.com/sudiptadeb',
+          'https://www.linkedin.com/in/-sudiptadeb',
+        ],
+        jobTitle: 'Platform & security lead',
+        description:
+          'I build the things I couldn\'t find, and write the things whitepapers won\'t.',
+      }),
+    },
+  ],
 })
 </script>
 

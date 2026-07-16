@@ -2,7 +2,7 @@
   <div>
     <SiteHeader :max-width="880" nav-gap="16px">
       <template #brand>
-        <SiteBrand domain="blog.debkosh.com" />
+        <SiteBrand domain="debkosh.com/blogs" />
       </template>
       <template #nav>
         <NuxtLink to="/" class="nav-link">debkosh.com</NuxtLink>
@@ -62,10 +62,11 @@
       </div>
     </section>
 
-    <SiteFooter :max-width="880" label="blog.debkosh.com" :margin-top="56">
+    <SiteFooter :max-width="880" label="debkosh.com/blogs" :margin-top="56">
       <NuxtLink to="/">debkosh.com</NuxtLink>
       <NuxtLink to="/labs">lab</NuxtLink>
       <a href="https://github.com/sudiptadeb" target="_blank" rel="noopener">github</a>
+      <a href="/rss.xml">rss</a>
     </SiteFooter>
   </div>
 </template>
@@ -114,6 +115,12 @@ useSeoMeta({
   ogTitle: 'The part vendors leave out. · Sudipta Deb',
   ogDescription:
     'Long-form on enterprise browsers, proxies, and enforcement. How it actually works, what the tradeoffs really cost.',
+  ogImage: 'https://debkosh.com/og/default.png',
+  ogUrl: 'https://debkosh.com/blogs',
+})
+
+useHead({
+  link: [{ rel: 'canonical', href: 'https://debkosh.com/blogs' }],
 })
 </script>
 
