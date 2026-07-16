@@ -5,7 +5,7 @@ date: 2026-02-17
 minutes: 7
 series: The extension ceiling
 part: 1
-parts: 3
+parts: 4
 summary: If your security tool needs to watch the screen to do its job, you have already left the extension model. The mechanics of why.
 short: Extensions cannot record the screen without per-session user consent. The workarounds are partial reconstructions, and managed policy cannot consent on the user's behalf. If recording is mandatory, the requirement is a browser, not an extension.
 ---

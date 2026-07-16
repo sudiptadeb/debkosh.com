@@ -5,7 +5,7 @@ date: 2026-05-28
 minutes: 5
 series: The extension ceiling
 part: 3
-parts: 3
+parts: 4
 summary: Every extension-based DLP I tested loses sight of the user the moment an incognito window opens. The mechanism, and why policy can't fully close it.
 short: Extensions are off in incognito unless the user opts each one in, and no enterprise policy flips that switch for them. Every extension-based control on the machine is one keyboard shortcut from blind.
 ---

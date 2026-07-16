@@ -5,7 +5,7 @@ date: 2026-04-09
 minutes: 6
 series: The extension ceiling
 part: 2
-parts: 3
+parts: 4
 summary: Chrome sync will happily carry corporate state into personal profiles. What the MDM scoping rules actually cover, item by item.
 short: Chrome sync moves passwords, history, and open tabs to whatever Google account is signed in, corporate or not. The policies that scope it manage the profile, not the person, and an extension cannot see the channel at all.
 ---
