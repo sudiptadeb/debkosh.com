@@ -80,6 +80,24 @@ const tools = [
     year: '2026',
   },
   {
+    name: 'linfer',
+    desc: 'The best local LLM setup for your machine: picks llama.cpp or MLX, installs it, fetches and sizes the model, serves one OpenAI-compatible URL.',
+    stack: 'Go · llama.cpp · oMLX',
+    year: '2026',
+  },
+  {
+    name: 'linfer-bench',
+    desc: 'Benchmarks OpenAI-compatible endpoints the way agents use them: decode and prefill speed, tool-calling accuracy, needle retrieval, tagged runs.',
+    stack: 'Go · HTML report',
+    year: '2026',
+  },
+  {
+    name: 'amarit',
+    desc: 'Keep it alive, keep it current: self-update from a release manifest with rollback, and a keep-alive daemon under launchd, systemd or nothing.',
+    stack: 'Go · launchd · systemd',
+    year: '2026',
+  },
+  {
     name: 'termulaa',
     desc: 'Terminal and coding agents in a browser tab. PTY sessions survive the tab closing, scrollback replays on reconnect.',
     stack: 'Go · xterm.js · WebSocket',
@@ -102,7 +120,7 @@ const tools = [
 useSeoMeta({
   title: 'Lab',
   description:
-    'The maintained tools, indexed: memd, termulaa, keysat, and sackup. Each entry is real, builds, and did the job it was made for.',
+    'The maintained tools, indexed: memd, linfer, linfer-bench, amarit, termulaa, keysat, and sackup. Each entry is real, builds, and did the job it was made for.',
   ogTitle: 'The lab · Sudipta Deb',
   ogDescription: 'The tools I keep running.',
   ogImage: 'https://debkosh.com/og/default.png',

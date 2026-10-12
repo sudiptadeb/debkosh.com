@@ -108,6 +108,66 @@
           </div>
         </div>
 
+        <!-- local AI stack -->
+        <div class="cards-2">
+          <div class="card card-media">
+            <div class="card-img">
+              <img
+                src="/images/linfer-doctor.webp"
+                alt="linfer doctor on a 256 GB Apple Silicon machine, picking the backend and printing the URL and model id for the client"
+                loading="lazy"
+              />
+            </div>
+            <div class="card-body">
+              <div class="card-head">
+                <h3 class="card-name">linfer</h3>
+                <span class="card-cat">Local LLMs</span>
+              </div>
+              <p class="card-tagline">
+                The best local inference setup for your machine, without the hassle.
+              </p>
+              <p class="card-desc">
+                Picks llama.cpp or MLX for the hardware, installs it, fetches the model, sizes the
+                launch to the memory left after the weights, and hands your client one URL that never
+                changes. On one 256 GB Mac the right runtime made an agent call 2.6× faster than
+                Ollama.
+              </p>
+              <div class="card-stack">Go · llama.cpp · oMLX · OpenAI-compatible</div>
+              <a href="https://github.com/sudiptadeb/linfer" target="_blank" rel="noopener" class="card-repo">
+                sudiptadeb/linfer <Icon name="arrow-up-right" :size="13" />
+              </a>
+            </div>
+          </div>
+
+          <div class="card card-media">
+            <div class="card-img">
+              <img
+                src="/images/linfer-bench-report.webp"
+                alt="a linfer-bench report comparing llama.cpp and MLX: verdict and throughput charts"
+                loading="lazy"
+              />
+            </div>
+            <div class="card-body">
+              <div class="card-head">
+                <h3 class="card-name">linfer-bench</h3>
+                <span class="card-cat">Benchmark</span>
+              </div>
+              <p class="card-tagline">
+                Benchmark any OpenAI-compatible endpoint the way an agent uses it.
+              </p>
+              <p class="card-desc">
+                Decode and prefill speed cold and warm, tool-calling accuracy case by case, needle
+                retrieval. Tag runs and compare them, so a backend upgrade gets a before and after
+                instead of a feeling.
+              </p>
+              <div class="card-stack">Go · OpenAI-compatible · HTML report</div>
+              <a href="https://github.com/sudiptadeb/linfer-bench" target="_blank" rel="noopener" class="card-repo">
+                sudiptadeb/linfer-bench <Icon name="arrow-up-right" :size="13" />
+              </a>
+            </div>
+          </div>
+        </div>
+
         <!-- showcase cards -->
         <div class="cards-2">
           <div class="card card-media">
@@ -165,8 +225,28 @@
           </div>
         </div>
 
-        <!-- sackup + more -->
+        <!-- amarit, sackup, more -->
         <div class="cards-2">
+          <div class="card">
+            <div class="card-body card-body-flat">
+              <div class="card-head">
+                <h3 class="card-name">amarit</h3>
+                <span class="card-cat">Ops · Go library</span>
+              </div>
+              <p class="card-tagline">Keep it alive. Keep it current.</p>
+              <p class="card-desc">
+                A library a Go program embeds to update itself from a release manifest: verify,
+                swap, restart, roll back by itself if the new version isn't healthy. Plus a daemon
+                that keeps any program running under launchd, systemd or nothing, without sudo
+                after one install.
+              </p>
+              <div class="card-stack">Go · launchd · systemd · go install</div>
+              <a href="https://github.com/sudiptadeb/amarit" target="_blank" rel="noopener" class="card-repo">
+                sudiptadeb/amarit <Icon name="arrow-up-right" :size="13" />
+              </a>
+            </div>
+          </div>
+
           <div class="card">
             <div class="card-body card-body-flat">
               <div class="card-head">
@@ -187,7 +267,7 @@
               </a>
             </div>
           </div>
-          <div class="more-card">
+          <div class="more-card more-card-wide">
             <div class="more-head">
               <span class="more-label">More</span>
               <span class="more-sub">Smaller builds and experiments.</span>
@@ -402,7 +482,7 @@ const workChips = [
 
 useSeoMeta({
   description:
-    'Sudipta Deb builds the things he couldn\'t find and writes the things whitepapers won\'t. Ulaa, an enterprise browser, the SASE stack underneath it, and tools like memd, termulaa, keysat, and sackup.',
+    'Sudipta Deb builds the things he couldn\'t find and writes the things whitepapers won\'t. Ulaa, an enterprise browser, the SASE stack underneath it, and tools like memd, linfer, amarit, termulaa, keysat, and sackup.',
   ogTitle: 'Sudipta Deb · debkosh.com',
   ogDescription:
     'I build the things I couldn\'t find, and write the things whitepapers won\'t.',
@@ -819,6 +899,10 @@ useHead({
 
 .card-repo:hover {
   color: var(--accent-hover);
+}
+
+.more-card-wide {
+  grid-column: 1 / -1;
 }
 
 .more-card {

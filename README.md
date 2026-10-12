@@ -9,7 +9,7 @@ layered surfaces, single Sky accent, hairline borders). Static generation, no se
 
 | Route | What it is |
 |---|---|
-| `/` | The hub: hero + meta panel, Build (memd flagship, termulaa/keysat/sackup), Work (Ulaa + SASE stack), Write, About |
+| `/` | The hub: hero + meta panel, Build (memd flagship, linfer/linfer-bench, termulaa/keysat, amarit/sackup), Work (Ulaa + SASE stack), Write, About |
 | `/blogs` | Blog index, year-grouped, driven by `content/blog/*.md` |
 | `/blogs/<slug>` | Article template: series eyebrow, short-version callout, prose, next-in-series card |
 | `/labs` | Project index, maintained tools only |

@@ -18,6 +18,15 @@ tradeoffs really cost.
 - [memd](https://github.com/sudiptadeb/memd): file-first memory for AI
   agents — markdown files you own and version. Also at
   https://memd.debkosh.com
+- [linfer](https://github.com/sudiptadeb/linfer): the best local LLM
+  inference setup for your machine; picks llama.cpp or MLX, installs it,
+  fetches and sizes the model, serves one OpenAI-compatible URL.
+- [linfer-bench](https://github.com/sudiptadeb/linfer-bench): benchmarks
+  OpenAI-compatible endpoints the way agents use them — speed, tool-calling
+  accuracy, needle retrieval — and compares tagged runs.
+- [amarit](https://github.com/sudiptadeb/amarit): keep it alive, keep it
+  current — self-update for Go programs from a release manifest, with
+  rollback, plus a keep-alive daemon under launchd, systemd or nothing.
 - [termulaa](https://github.com/sudiptadeb/termulaa): terminal and coding
   agents in a browser tab, with sessions that survive the tab closing.
 - [keysat](https://github.com/sudiptadeb/keysat): local-first keystroke
