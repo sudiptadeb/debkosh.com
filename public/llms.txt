@@ -24,11 +24,19 @@ tradeoffs really cost.
 - [linfer-bench](https://github.com/sudiptadeb/linfer-bench): benchmarks
   OpenAI-compatible endpoints the way agents use them — speed, tool-calling
   accuracy, needle retrieval — and compares tagged runs.
+- [project-b](https://github.com/sudiptadeb/project-b): an experiment in a
+  better browser architecture; Go managers, a Vue shell and Chromium's
+  unpatched content layer behind one engine interface, for macOS and
+  arm64 Android.
 - [amarit](https://github.com/sudiptadeb/amarit): keep it alive, keep it
-  current — self-update for Go programs from a release manifest, with
-  rollback, plus a keep-alive daemon under launchd, systemd or nothing.
+  current — `amarit run` keeps any command running through crashes and
+  reboots, and one line makes a Go program update itself with rollback.
 - [termulaa](https://github.com/sudiptadeb/termulaa): terminal and coding
-  agents in a browser tab, with sessions that survive the tab closing.
+  agents in a browser tab, with sessions that survive the tab closing,
+  remote access through an outbound tunnel, an Android app and
+  `termulaa exec`.
+- [etchosts](https://github.com/sudiptadeb/etchosts): an /etc/hosts file
+  for Android without root, through a local DNS-only VPN.
 - [keysat](https://github.com/sudiptadeb/keysat): local-first keystroke
   and activity tracking for macOS; never leaves the machine.
 - [sackup](https://github.com/sudiptadeb/sackup): phone backup to a USB

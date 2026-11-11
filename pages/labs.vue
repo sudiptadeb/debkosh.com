@@ -92,16 +92,28 @@ const tools = [
     year: '2026',
   },
   {
+    name: 'project-b',
+    desc: 'An experiment in a better browser architecture: Go managers, a Vue shell and Chromium\'s unpatched content layer behind one engine interface. Runs on macOS and arm64 Android.',
+    stack: 'Go · Vue · Chromium · C++',
+    year: '2026',
+  },
+  {
     name: 'amarit',
-    desc: 'Keep it alive, keep it current: self-update from a release manifest with rollback, and a keep-alive daemon under launchd, systemd or nothing.',
+    desc: 'Keep it alive, keep it current: amarit run keeps any command up through crashes and reboots, and one line makes a Go program update itself with rollback. One-line install.',
     stack: 'Go · launchd · systemd',
     year: '2026',
   },
   {
     name: 'termulaa',
-    desc: 'Terminal and coding agents in a browser tab. PTY sessions survive the tab closing, scrollback replays on reconnect.',
+    desc: 'Terminal and coding agents in a browser tab. Sessions survive the tab closing; reach your machines through an outbound tunnel, an Android app, or termulaa exec.',
     stack: 'Go · xterm.js · WebSocket',
     year: '2025',
+  },
+  {
+    name: 'etchosts',
+    desc: 'An /etc/hosts file for Android without root: a local DNS-only VPN that answers your names on the phone and forwards the rest over DoH or UDP.',
+    stack: 'Kotlin · VpnService · DoH',
+    year: '2026',
   },
   {
     name: 'keysat',
@@ -120,7 +132,7 @@ const tools = [
 useSeoMeta({
   title: 'Lab',
   description:
-    'The maintained tools, indexed: memd, linfer, linfer-bench, amarit, termulaa, keysat, and sackup. Each entry is real, builds, and did the job it was made for.',
+    'The maintained tools, indexed: memd, linfer, linfer-bench, project-b, amarit, termulaa, etchosts, keysat, and sackup. Each entry is real, builds, and did the job it was made for.',
   ogTitle: 'The lab · Sudipta Deb',
   ogDescription: 'The tools I keep running.',
   ogImage: 'https://debkosh.com/og/default.png',

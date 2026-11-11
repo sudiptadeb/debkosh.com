@@ -168,7 +168,34 @@
           </div>
         </div>
 
-        <!-- showcase cards -->
+        <!-- browser -->
+        <div class="cards-2">
+          <div class="card card-wide">
+            <div class="card-body card-body-flat">
+              <div class="card-head">
+                <h3 class="card-name">project-b</h3>
+                <span class="card-cat">Browser · experiment</span>
+              </div>
+              <p class="card-tagline">
+                An experiment in how a browser could be built better, starting from Chromium's
+                content layer instead of forking Chrome.
+              </p>
+              <p class="card-desc">
+                The question: what does a cleaner browser architecture look like? Here, Go managers
+                own how the browser behaves, a Vue shell draws it, and Chromium's content layer
+                renders pages, unpatched, behind one engine interface. Far enough along to run as a
+                real browser: tabs, profiles, menus, extensions, DevTools, a Mac DMG that updates
+                itself, and arm64 Android from the same tree.
+              </p>
+              <div class="card-stack">Go · Vue · Chromium content layer · C++</div>
+              <a href="https://github.com/sudiptadeb/project-b" target="_blank" rel="noopener" class="card-repo">
+                sudiptadeb/project-b <Icon name="arrow-up-right" :size="13" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- terminal and ops -->
         <div class="cards-2">
           <div class="card card-media">
             <div class="card-img">
@@ -188,16 +215,48 @@
                 building.
               </p>
               <p class="card-desc">
-                One small Go binary instead of ttyd plus tmux with seams. PTY sessions survive the
-                tab closing, scrollback replays on reconnect. Loopback-only.
+                One small Go binary, loopback-only. Sessions survive the tab closing and come back
+                exactly as they were. Reach your machines from anywhere through an outbound tunnel,
+                from an Android app that pings you when an agent prints, or with
+                <code>termulaa exec laptop -- make test</code> from a script.
               </p>
-              <div class="card-stack">Go · xterm.js · WebSocket · go install</div>
+              <div class="card-stack">Go · xterm.js · WebSocket · Android</div>
               <a href="https://github.com/sudiptadeb/termulaa" target="_blank" rel="noopener" class="card-repo">
                 sudiptadeb/termulaa <Icon name="arrow-up-right" :size="13" />
               </a>
             </div>
           </div>
 
+          <div class="card card-media">
+            <div class="card-img card-img-left">
+              <img
+                src="/images/amarit-keep-alive.gif"
+                alt="amarit installing, running a web server, and bringing it back after a crash"
+                loading="lazy"
+              />
+            </div>
+            <div class="card-body">
+              <div class="card-head">
+                <h3 class="card-name">amarit</h3>
+                <span class="card-cat">Ops · Go library</span>
+              </div>
+              <p class="card-tagline">Keep it alive. Keep it current.</p>
+              <p class="card-desc">
+                <code>amarit run</code> keeps any command running through crashes and reboots, with
+                its logs kept. Add one line to a Go program and every installed copy updates itself,
+                checksum-verified, rolling back if the new version doesn't come up. No config, no
+                root, no ports.
+              </p>
+              <div class="card-stack card-install">curl -fsSL https://raw.githubusercontent.com/sudiptadeb/amarit/main/install.sh | sh</div>
+              <a href="https://github.com/sudiptadeb/amarit" target="_blank" rel="noopener" class="card-repo">
+                sudiptadeb/amarit <Icon name="arrow-up-right" :size="13" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- keysat, etchosts -->
+        <div class="cards-2">
           <div class="card card-media">
             <div class="card-img">
               <img
@@ -223,30 +282,36 @@
               </a>
             </div>
           </div>
-        </div>
 
-        <!-- amarit, sackup, more -->
-        <div class="cards-2">
-          <div class="card">
-            <div class="card-body card-body-flat">
+          <div class="card card-media">
+            <div class="card-img">
+              <img
+                src="/images/etchosts.webp"
+                alt="etc hosts on Android: the override on with three names, and recent lookups answered locally"
+                loading="lazy"
+              />
+            </div>
+            <div class="card-body">
               <div class="card-head">
-                <h3 class="card-name">amarit</h3>
-                <span class="card-cat">Ops · Go library</span>
+                <h3 class="card-name">etchosts</h3>
+                <span class="card-cat">Android</span>
               </div>
-              <p class="card-tagline">Keep it alive. Keep it current.</p>
+              <p class="card-tagline">An /etc/hosts file for your phone, without root.</p>
               <p class="card-desc">
-                A library a Go program embeds to update itself from a release manifest: verify,
-                swap, restart, roll back by itself if the new version isn't healthy. Plus a daemon
-                that keeps any program running under launchd, systemd or nothing, without sudo
-                after one install.
+                A local VPN that carries only DNS. Names in your list are answered on the phone,
+                everything else goes to the resolver you pick over DoH or UDP. Point a phone at a
+                staging box by name, per app if you like. Edits apply live.
               </p>
-              <div class="card-stack">Go · launchd · systemd · go install</div>
-              <a href="https://github.com/sudiptadeb/amarit" target="_blank" rel="noopener" class="card-repo">
-                sudiptadeb/amarit <Icon name="arrow-up-right" :size="13" />
+              <div class="card-stack">Kotlin · VpnService · DoH</div>
+              <a href="https://github.com/sudiptadeb/etchosts" target="_blank" rel="noopener" class="card-repo">
+                sudiptadeb/etchosts <Icon name="arrow-up-right" :size="13" />
               </a>
             </div>
           </div>
+        </div>
 
+        <!-- sackup, more -->
+        <div class="cards-2">
           <div class="card">
             <div class="card-body card-body-flat">
               <div class="card-head">
@@ -267,7 +332,7 @@
               </a>
             </div>
           </div>
-          <div class="more-card more-card-wide">
+          <div class="more-card">
             <div class="more-head">
               <span class="more-label">More</span>
               <span class="more-sub">Smaller builds and experiments.</span>
@@ -482,7 +547,7 @@ const workChips = [
 
 useSeoMeta({
   description:
-    'Sudipta Deb builds the things he couldn\'t find and writes the things whitepapers won\'t. Ulaa, an enterprise browser, the SASE stack underneath it, and tools like memd, linfer, amarit, termulaa, keysat, and sackup.',
+    'Sudipta Deb builds the things he couldn\'t find and writes the things whitepapers won\'t. Ulaa, an enterprise browser, the SASE stack underneath it, and tools like memd, linfer, amarit, termulaa, and etchosts.',
   ogTitle: 'Sudipta Deb · debkosh.com',
   ogDescription:
     'I build the things I couldn\'t find, and write the things whitepapers won\'t.',
@@ -901,8 +966,22 @@ useHead({
   color: var(--accent-hover);
 }
 
-.more-card-wide {
+.card-wide {
   grid-column: 1 / -1;
+}
+
+.card-install {
+  overflow-wrap: anywhere;
+  user-select: all;
+}
+
+.card-img-left img {
+  object-position: left top;
+}
+
+.card-desc code {
+  font: 400 0.92em/1 var(--font-mono);
+  color: var(--fg-1);
 }
 
 .more-card {
