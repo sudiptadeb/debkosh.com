@@ -116,6 +116,18 @@ const tools = [
     year: '2026',
   },
   {
+    name: 'keykosh',
+    desc: 'Signing keys and secrets in one folder, sealed with one passphrase using age, so it can live in a private git repo. Clone it on a new machine, unlock, and every key is back.',
+    stack: 'Go · age · git',
+    year: '2026',
+  },
+  {
+    name: 'deskrig',
+    desc: 'One testing interface for agents: window screenshots, real clicks, keys and trackpad scrolls, a frame stream and DMG installs, on this Mac or a clean macOS VM. Works without a display.',
+    stack: 'Go · macOS · Tart',
+    year: '2026',
+  },
+  {
     name: 'keysat',
     desc: 'Local-first keystroke and activity tracking for macOS. Searchable, charted, never leaves the machine.',
     stack: 'Go · SQLite + FTS5 · Alpine.js',
@@ -132,7 +144,7 @@ const tools = [
 useSeoMeta({
   title: 'Lab',
   description:
-    'The maintained tools, indexed: memd, linfer, linfer-bench, project-b, amarit, termulaa, etchosts, keysat, and sackup. Each entry is real, builds, and did the job it was made for.',
+    'The maintained tools, indexed: memd, linfer, linfer-bench, project-b, amarit, termulaa, etchosts, keykosh, deskrig, keysat, and sackup. Each entry is real, builds, and did the job it was made for.',
   ogTitle: 'The lab · Sudipta Deb',
   ogDescription: 'The tools I keep running.',
   ogImage: 'https://debkosh.com/og/default.png',

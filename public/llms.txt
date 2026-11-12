@@ -37,6 +37,12 @@ tradeoffs really cost.
   `termulaa exec`.
 - [etchosts](https://github.com/sudiptadeb/etchosts): an /etc/hosts file
   for Android without root, through a local DNS-only VPN.
+- [keykosh](https://github.com/sudiptadeb/keykosh): signing keys and
+  secrets in one folder, sealed with one passphrase (age), so it can live
+  in a private git repo; clone and unlock on a new machine.
+- [deskrig](https://github.com/sudiptadeb/deskrig): one testing interface
+  for agents; window screenshots, real clicks, keys and trackpad scrolls,
+  a frame stream and DMG installs, on this Mac or a clean macOS VM.
 - [keysat](https://github.com/sudiptadeb/keysat): local-first keystroke
   and activity tracking for macOS; never leaves the machine.
 - [sackup](https://github.com/sudiptadeb/sackup): phone backup to a USB

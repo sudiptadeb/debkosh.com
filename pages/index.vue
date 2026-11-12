@@ -310,6 +310,48 @@
           </div>
         </div>
 
+        <!-- keykosh, deskrig -->
+        <div class="cards-2">
+          <div class="card">
+            <div class="card-body card-body-flat">
+              <div class="card-head">
+                <h3 class="card-name">keykosh</h3>
+                <span class="card-cat">Secrets · CLI</span>
+              </div>
+              <p class="card-tagline">Your keys in one folder, sealed with one passphrase.</p>
+              <p class="card-desc">
+                Signing keys and secrets are sealed with age, so the folder can live in a private git
+                repo. On a new machine you clone it, type the passphrase, and every key is back where
+                it was. Sealing needs no passphrase, so scripts and agents can add keys they cannot
+                read.
+              </p>
+              <div class="card-stack">Go · age · git</div>
+              <a href="https://github.com/sudiptadeb/keykosh" target="_blank" rel="noopener" class="card-repo">
+                sudiptadeb/keykosh <Icon name="arrow-up-right" :size="13" />
+              </a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-body card-body-flat">
+              <div class="card-head">
+                <h3 class="card-name">deskrig</h3>
+                <span class="card-cat">Testing · agents</span>
+              </div>
+              <p class="card-tagline">Let an agent test an app the way a person would.</p>
+              <p class="card-desc">
+                Screenshots of one window, real clicks, keys and trackpad scrolls, a live frame
+                stream, and DMG installs, on this Mac's desktop or in a clean macOS VM with the same
+                commands. Works from agent shells, ssh and CI, which have no display.
+              </p>
+              <div class="card-stack">Go · macOS · Tart</div>
+              <a href="https://github.com/sudiptadeb/deskrig" target="_blank" rel="noopener" class="card-repo">
+                sudiptadeb/deskrig <Icon name="arrow-up-right" :size="13" />
+              </a>
+            </div>
+          </div>
+        </div>
+
         <!-- sackup, more -->
         <div class="cards-2">
           <div class="card">
