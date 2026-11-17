@@ -219,6 +219,11 @@
             </li>
             <li>The Mac app isn't notarized, so macOS asks once before the first launch.</li>
             <li>
+              The code is on GitHub to read. It is not open source: the
+              <a :href="REPO + '/blob/main/LICENSE'" target="_blank" rel="noopener">licence</a>
+              reserves all rights.
+            </li>
+            <li>
               Development is ongoing, so expect rough edges. Bugs and ideas are welcome in the
               <a :href="REPO + '/issues'" target="_blank" rel="noopener">issues</a>.
             </li>
