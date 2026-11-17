@@ -127,6 +127,10 @@
               Go · Svelte shells · C++ · Chromium 155 content layer · macOS + Android
             </div>
             <div class="flagship-links">
+              <NuxtLink to="/project-b" class="flagship-btn">
+                <span class="flagship-btn-label">Tour</span>debkosh.com/project-b
+                <Icon name="arrow-right" :size="13" stroke="var(--fg-3)" />
+              </NuxtLink>
               <a href="https://github.com/sudiptadeb/project-b" target="_blank" rel="noopener" class="flagship-btn">
                 <span class="flagship-btn-label">Code</span>sudiptadeb/project-b
                 <Icon name="arrow-up-right" :size="13" stroke="var(--fg-3)" />
@@ -140,7 +144,7 @@
           <div class="flagship-media">
             <img
               src="/images/project-b.webp"
-              alt="Project B on a Mac with tabs down the side, and the Mobile shell on an Android phone"
+              alt="Project B on a Mac with tabs down the side and a blue frame, showing stripe.com, and the Mobile shell on an Android phone"
               loading="lazy"
             />
           </div>

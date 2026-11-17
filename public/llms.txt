@@ -11,6 +11,7 @@ tradeoffs really cost.
 - [Home](https://debkosh.com/)
 - [Blog](https://debkosh.com/blogs)
 - [Lab (projects)](https://debkosh.com/labs)
+- [Project B](https://debkosh.com/project-b): the browser experiment's own page
 - [RSS feed](https://debkosh.com/rss.xml)
 
 ## Projects

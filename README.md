@@ -13,6 +13,7 @@ layered surfaces, single Sky accent, hairline borders). Static generation, no se
 | `/blogs` | Blog index, year-grouped, driven by `content/blog/*.md` |
 | `/blogs/<slug>` | Article template: series eyebrow, short-version callout, prose, next-in-series card |
 | `/labs` | Project index, maintained tools only |
+| `/project-b` | Project B's own page: hero, architecture, gallery, features, honest status, install |
 
 ## Content
 

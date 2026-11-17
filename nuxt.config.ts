@@ -75,7 +75,7 @@ export default defineNuxtConfig({
     preset: 'static',
     prerender: {
       crawlLinks: true,
-      routes: ['/', '/blogs', '/labs', '/rss.xml'],
+      routes: ['/', '/blogs', '/labs', '/project-b', '/rss.xml'],
     },
   },
 })
