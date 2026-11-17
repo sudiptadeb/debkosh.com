@@ -80,6 +80,12 @@ const tools = [
     year: '2026',
   },
   {
+    name: 'project-b',
+    desc: 'An experiment in how a browser could be built with a better architecture: a Go core owns every decision, swappable web shells draw it, and Chromium\'s unpatched content layer renders pages behind one engine interface. Self-updating releases for Mac and arm64 Android.',
+    stack: 'Go · Svelte · Chromium · C++',
+    year: '2026',
+  },
+  {
     name: 'linfer',
     desc: 'The best local LLM setup for your machine: picks llama.cpp or MLX, installs it, fetches and sizes the model, serves one OpenAI-compatible URL.',
     stack: 'Go · llama.cpp · oMLX',
@@ -89,12 +95,6 @@ const tools = [
     name: 'linfer-bench',
     desc: 'Benchmarks OpenAI-compatible endpoints the way agents use them: decode and prefill speed, tool-calling accuracy, needle retrieval, tagged runs.',
     stack: 'Go · HTML report',
-    year: '2026',
-  },
-  {
-    name: 'project-b',
-    desc: 'An experiment in a better browser architecture: Go managers, a Vue shell and Chromium\'s unpatched content layer behind one engine interface. Runs on macOS and arm64 Android.',
-    stack: 'Go · Vue · Chromium · C++',
     year: '2026',
   },
   {
@@ -113,6 +113,12 @@ const tools = [
     name: 'etchosts',
     desc: 'An /etc/hosts file for Android without root: a local DNS-only VPN that answers your names on the phone and forwards the rest over DoH or UDP.',
     stack: 'Kotlin · VpnService · DoH',
+    year: '2026',
+  },
+  {
+    name: 'synckosh',
+    desc: 'End-to-end encrypted sync for apps that keep the user\'s data on their devices. The server stores items but can\'t read them, the newest edit wins per item, and it mounts as a Go http.Handler behind your own sign-in.',
+    stack: 'Go · bbolt',
     year: '2026',
   },
   {
@@ -144,7 +150,7 @@ const tools = [
 useSeoMeta({
   title: 'Lab',
   description:
-    'The maintained tools, indexed: memd, linfer, linfer-bench, project-b, amarit, termulaa, etchosts, keykosh, deskrig, keysat, and sackup. Each entry is real, builds, and did the job it was made for.',
+    'The maintained tools, indexed: memd, project-b, linfer, linfer-bench, amarit, termulaa, etchosts, synckosh, keykosh, deskrig, keysat, and sackup. Each entry is real, builds, and did the job it was made for.',
   ogTitle: 'The lab · Sudipta Deb',
   ogDescription: 'The tools I keep running.',
   ogImage: 'https://debkosh.com/og/default.png',

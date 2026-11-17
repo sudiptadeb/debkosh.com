@@ -18,16 +18,17 @@ tradeoffs really cost.
 - [memd](https://github.com/sudiptadeb/memd): file-first memory for AI
   agents — markdown files you own and version. Also at
   https://memd.debkosh.com
+- [project-b](https://github.com/sudiptadeb/project-b): an experiment in
+  how a browser could be built with a better architecture; a Go core owns
+  every decision, swappable web shells draw it, and Chromium's unpatched
+  content layer renders pages behind one engine interface. Self-updating
+  releases for Apple silicon Macs and arm64 Android.
 - [linfer](https://github.com/sudiptadeb/linfer): the best local LLM
   inference setup for your machine; picks llama.cpp or MLX, installs it,
   fetches and sizes the model, serves one OpenAI-compatible URL.
 - [linfer-bench](https://github.com/sudiptadeb/linfer-bench): benchmarks
   OpenAI-compatible endpoints the way agents use them — speed, tool-calling
   accuracy, needle retrieval — and compares tagged runs.
-- [project-b](https://github.com/sudiptadeb/project-b): an experiment in a
-  better browser architecture; Go managers, a Vue shell and Chromium's
-  unpatched content layer behind one engine interface, for macOS and
-  arm64 Android.
 - [amarit](https://github.com/sudiptadeb/amarit): keep it alive, keep it
   current — `amarit run` keeps any command running through crashes and
   reboots, and one line makes a Go program update itself with rollback.
@@ -37,6 +38,10 @@ tradeoffs really cost.
   `termulaa exec`.
 - [etchosts](https://github.com/sudiptadeb/etchosts): an /etc/hosts file
   for Android without root, through a local DNS-only VPN.
+- [synckosh](https://github.com/sudiptadeb/synckosh): end-to-end
+  encrypted sync for apps that keep the user's data on their devices; the
+  server stores items but can't read them, the newest edit wins per item,
+  and it mounts as a Go http.Handler behind your own sign-in.
 - [keykosh](https://github.com/sudiptadeb/keykosh): signing keys and
   secrets in one folder, sealed with one passphrase (age), so it can live
   in a private git repo; clone and unlock on a new machine.

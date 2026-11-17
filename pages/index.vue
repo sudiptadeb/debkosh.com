@@ -108,6 +108,44 @@
           </div>
         </div>
 
+        <!-- project-b -->
+        <div class="flagship flagship-second">
+          <div>
+            <div class="flagship-pill">Experiment · v0.2.79</div>
+            <h3 class="flagship-name">Project B</h3>
+            <p class="flagship-tagline">
+              An experiment in how a browser could be built with a better architecture.
+            </p>
+            <p class="flagship-body">
+              A Go core owns every decision. The interface on top is a web page you can swap, and
+              Chromium's content layer renders the pages, unpatched, behind one engine interface. It
+              runs as a daily browser: per-site settings with an ad blocker, link blocking and
+              userscripts, downloads, printing, a first-run welcome, and default-browser support.
+              One tree builds a Mac DMG and an Android APK, and installed copies update themselves.
+            </p>
+            <div class="flagship-stack">
+              Go · Svelte shells · C++ · Chromium 155 content layer · macOS + Android
+            </div>
+            <div class="flagship-links">
+              <a href="https://github.com/sudiptadeb/project-b" target="_blank" rel="noopener" class="flagship-btn">
+                <span class="flagship-btn-label">Code</span>sudiptadeb/project-b
+                <Icon name="arrow-up-right" :size="13" stroke="var(--fg-3)" />
+              </a>
+              <a href="https://github.com/sudiptadeb/project-b/releases" target="_blank" rel="noopener" class="flagship-btn">
+                <span class="flagship-btn-label">Get it</span>Releases
+                <Icon name="arrow-up-right" :size="13" stroke="var(--fg-3)" />
+              </a>
+            </div>
+          </div>
+          <div class="flagship-media">
+            <img
+              src="/images/project-b.webp"
+              alt="Project B on a Mac with tabs down the side, and the Mobile shell on an Android phone"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
         <!-- local AI stack -->
         <div class="cards-2">
           <div class="card card-media">
@@ -163,33 +201,6 @@
               <div class="card-stack">Go · OpenAI-compatible · HTML report</div>
               <a href="https://github.com/sudiptadeb/linfer-bench" target="_blank" rel="noopener" class="card-repo">
                 sudiptadeb/linfer-bench <Icon name="arrow-up-right" :size="13" />
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- browser -->
-        <div class="cards-2">
-          <div class="card card-wide">
-            <div class="card-body card-body-flat">
-              <div class="card-head">
-                <h3 class="card-name">project-b</h3>
-                <span class="card-cat">Browser · experiment</span>
-              </div>
-              <p class="card-tagline">
-                An experiment in how a browser could be built better, starting from Chromium's
-                content layer instead of forking Chrome.
-              </p>
-              <p class="card-desc">
-                The question: what does a cleaner browser architecture look like? Here, Go managers
-                own how the browser behaves, a Vue shell draws it, and Chromium's content layer
-                renders pages, unpatched, behind one engine interface. Far enough along to run as a
-                real browser: tabs, profiles, menus, extensions, DevTools, a Mac DMG that updates
-                itself, and arm64 Android from the same tree.
-              </p>
-              <div class="card-stack">Go · Vue · Chromium content layer · C++</div>
-              <a href="https://github.com/sudiptadeb/project-b" target="_blank" rel="noopener" class="card-repo">
-                sudiptadeb/project-b <Icon name="arrow-up-right" :size="13" />
               </a>
             </div>
           </div>
@@ -255,6 +266,49 @@
           </div>
         </div>
 
+        <!-- synckosh, keykosh -->
+        <div class="cards-2">
+          <div class="card">
+            <div class="card-body card-body-flat">
+              <div class="card-head">
+                <h3 class="card-name">synckosh</h3>
+                <span class="card-cat">Sync · Go library</span>
+              </div>
+              <p class="card-tagline">Sync for apps that keep the user's data on their devices.</p>
+              <p class="card-desc">
+                The server stores every item but can't read it: each one is sealed with a key only
+                the devices hold, and the server can't forge or alter one unnoticed. The newest edit
+                wins per item, devices work offline, and the server is an
+                <code>http.Handler</code> you mount behind your own sign-in.
+              </p>
+              <div class="card-stack">Go · bbolt · end-to-end encrypted</div>
+              <a href="https://github.com/sudiptadeb/synckosh" target="_blank" rel="noopener" class="card-repo">
+                sudiptadeb/synckosh <Icon name="arrow-up-right" :size="13" />
+              </a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-body card-body-flat">
+              <div class="card-head">
+                <h3 class="card-name">keykosh</h3>
+                <span class="card-cat">Secrets · CLI</span>
+              </div>
+              <p class="card-tagline">Your keys in one folder, sealed with one passphrase.</p>
+              <p class="card-desc">
+                Signing keys and secrets are sealed with age, so the folder can live in a private git
+                repo. On a new machine you clone it, type the passphrase, and every key is back where
+                it was. Sealing needs no passphrase, so scripts and agents can add keys they cannot
+                read.
+              </p>
+              <div class="card-stack">Go · age · git</div>
+              <a href="https://github.com/sudiptadeb/keykosh" target="_blank" rel="noopener" class="card-repo">
+                sudiptadeb/keykosh <Icon name="arrow-up-right" :size="13" />
+              </a>
+            </div>
+          </div>
+        </div>
+
         <!-- keysat, etchosts -->
         <div class="cards-2">
           <div class="card card-media">
@@ -310,28 +364,8 @@
           </div>
         </div>
 
-        <!-- keykosh, deskrig -->
+        <!-- deskrig, sackup -->
         <div class="cards-2">
-          <div class="card">
-            <div class="card-body card-body-flat">
-              <div class="card-head">
-                <h3 class="card-name">keykosh</h3>
-                <span class="card-cat">Secrets · CLI</span>
-              </div>
-              <p class="card-tagline">Your keys in one folder, sealed with one passphrase.</p>
-              <p class="card-desc">
-                Signing keys and secrets are sealed with age, so the folder can live in a private git
-                repo. On a new machine you clone it, type the passphrase, and every key is back where
-                it was. Sealing needs no passphrase, so scripts and agents can add keys they cannot
-                read.
-              </p>
-              <div class="card-stack">Go · age · git</div>
-              <a href="https://github.com/sudiptadeb/keykosh" target="_blank" rel="noopener" class="card-repo">
-                sudiptadeb/keykosh <Icon name="arrow-up-right" :size="13" />
-              </a>
-            </div>
-          </div>
-
           <div class="card">
             <div class="card-body card-body-flat">
               <div class="card-head">
@@ -350,10 +384,7 @@
               </a>
             </div>
           </div>
-        </div>
 
-        <!-- sackup, more -->
-        <div class="cards-2">
           <div class="card">
             <div class="card-body card-body-flat">
               <div class="card-head">
@@ -374,7 +405,11 @@
               </a>
             </div>
           </div>
-          <div class="more-card">
+        </div>
+
+        <!-- more -->
+        <div class="cards-2">
+          <div class="more-card more-wide">
             <div class="more-head">
               <span class="more-label">More</span>
               <span class="more-sub">Smaller builds and experiments.</span>
@@ -589,7 +624,7 @@ const workChips = [
 
 useSeoMeta({
   description:
-    'Sudipta Deb builds the things he couldn\'t find and writes the things whitepapers won\'t. Ulaa, an enterprise browser, the SASE stack underneath it, and tools like memd, linfer, amarit, termulaa, and etchosts.',
+    'Sudipta Deb builds the things he couldn\'t find and writes the things whitepapers won\'t. Ulaa, an enterprise browser, the SASE stack underneath it, and tools like memd, Project B, synckosh, linfer, amarit, and termulaa.',
   ogTitle: 'Sudipta Deb · debkosh.com',
   ogDescription:
     'I build the things I couldn\'t find, and write the things whitepapers won\'t.',
@@ -1008,8 +1043,12 @@ useHead({
   color: var(--accent-hover);
 }
 
-.card-wide {
+.more-wide {
   grid-column: 1 / -1;
+}
+
+.flagship-second {
+  margin-top: 12px;
 }
 
 .card-install {
