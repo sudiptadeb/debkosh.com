@@ -144,7 +144,7 @@
           <div class="flagship-media">
             <img
               src="/images/project-b.webp"
-              alt="Project B on a Mac with tabs down the side and a blue frame, showing stripe.com, and the Mobile shell on an Android phone"
+              alt="Project B in the dark theme with a teal frame on a Mac, showing stripe.com, and the Mobile shell on an Android phone"
               loading="lazy"
             />
           </div>

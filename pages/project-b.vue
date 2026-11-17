@@ -39,8 +39,16 @@
       </div>
       <div class="hero-shot">
         <img
+          class="for-dark"
           src="/images/project-b.webp"
-          alt="Project B on a Mac with tabs down the side and a blue frame, showing stripe.com, and the Mobile shell on an Android phone showing the same site"
+          alt="Project B in the dark theme with a teal frame on a Mac, showing stripe.com, and the Mobile shell on an Android phone showing the same site"
+          width="1600"
+          height="1000"
+        />
+        <img
+          class="for-light"
+          src="/images/project-b/hero-light.webp"
+          alt="Project B in the light theme with a blue frame on a Mac, showing stripe.com, and the Mobile shell on an Android phone showing the same site"
           width="1600"
           height="1000"
         />
@@ -150,21 +158,25 @@
             <img src="/images/project-b/site.webp" alt="The site panel over stripe.com: the ad blocker on, one blocked, and links to other sites allowed" loading="lazy" width="1600" height="1000" />
             <figcaption><strong>Every site, its own rules.</strong> The ad blocker and link blocking, one tap from the address field.</figcaption>
           </figure>
+          <figure class="shot shot-wide">
+            <img src="/images/project-b/themes.webp" alt="The same page in Project B twice: the light theme with a blue frame, and the dark theme with a teal frame" loading="lazy" width="1600" height="1000" />
+            <figcaption><strong>Light or dark, any frame colour.</strong> Pick a theme and a colour in settings and the whole window follows, live.</figcaption>
+          </figure>
           <figure class="shot">
-            <img src="/images/project-b/dark.webp" alt="Project B in the dark theme with a navy frame, showing linear.app" loading="lazy" width="1600" height="1000" />
-            <figcaption><strong>Dark, light or the system's.</strong> Pick a frame colour and the whole window follows.</figcaption>
+            <img src="/images/project-b/dark2.webp" alt="Project B in the dark theme with a teal frame, showing linear.app" loading="lazy" width="1600" height="1000" />
+            <figcaption><strong>Made for long sessions.</strong> The dark theme with tabs down the side.</figcaption>
           </figure>
           <figure class="shot">
             <img src="/images/project-b/tabs.webp" alt="Project B with tabs on top and a teal frame, showing nasa.gov" loading="lazy" width="1600" height="1000" />
             <figcaption><strong>Tabs down the side or on top.</strong> One switch in settings, applied live.</figcaption>
           </figure>
           <figure class="shot">
-            <img src="/images/project-b/phone.webp" alt="The Mobile shell on Android with stripe.com and nasa.gov" loading="lazy" width="1600" height="1000" />
+            <img src="/images/project-b/phone.webp" alt="The Mobile shell on Android in the light theme, with stripe.com and nasa.gov" loading="lazy" width="1600" height="1000" />
             <figcaption><strong>The same browser on a phone.</strong> The Go core and the shell come along to Android.</figcaption>
           </figure>
           <figure class="shot">
-            <img src="/images/project-b/settings.webp" alt="Project B's settings page in the dark theme" loading="lazy" width="1600" height="1000" />
-            <figcaption><strong>Settings that fit on one screen.</strong> Workspaces, site settings, Sparks, keyboard and flags.</figcaption>
+            <img src="/images/project-b/phone-dark.webp" alt="The Mobile shell on Android in the dark theme, with stripe.com and linear.app" loading="lazy" width="1600" height="1000" />
+            <figcaption><strong>And dark on the phone too.</strong> It follows the phone's own setting.</figcaption>
           </figure>
         </div>
       </div>
@@ -427,6 +439,18 @@ useHead({
   max-width: 1180px;
   margin: 48px auto 0;
   padding: 0 32px;
+}
+
+.for-light {
+  display: none !important;
+}
+
+:root[data-theme='light'] .for-light {
+  display: block !important;
+}
+
+:root[data-theme='light'] .for-dark {
+  display: none !important;
 }
 
 .hero-shot img {
