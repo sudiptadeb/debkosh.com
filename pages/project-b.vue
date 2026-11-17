@@ -15,15 +15,16 @@
       <div class="inner">
         <div class="eyebrow">
           <span class="dot" />
-          An experiment · v0.2.79 · Mac and Android
+          An experiment · v0.2.80 · development ongoing
         </div>
         <h1 class="title">
-          Project B: a browser rebuilt from the <span class="accent">content layer</span> up.
+          Project B: a browser you can <span class="accent">DIY</span>.
         </h1>
         <p class="sub">
-          An experiment in how a browser could be built with a better architecture. A Go core makes
-          every decision, the interface is a web page you can swap, and Chromium renders the pages,
-          unpatched. It runs on Apple silicon Macs and Android phones, and it updates itself.
+          An experiment in better browser architecture. The interface is a web-based shell anyone
+          can customise or replace. Under it, a small, safe Go core makes every decision, and
+          Chromium's content layer renders the pages, unpatched. It runs on Apple silicon Macs and
+          arm64 Android phones. Development is ongoing.
         </p>
         <div class="ctas">
           <a :href="RELEASES" target="_blank" rel="noopener" class="btn btn-primary">
@@ -33,7 +34,7 @@
             Android APK <Icon name="arrow-up-right" :size="14" />
           </a>
           <a :href="REPO" target="_blank" rel="noopener" class="btn">
-            <Icon name="github" :size="15" /> Source
+            <Icon name="github" :size="15" /> Source on GitHub
           </a>
         </div>
       </div>
@@ -115,22 +116,23 @@
           <div class="layer layer-shell">
             <div class="layer-head">
               <span class="layer-name">Shell</span>
-              <span class="layer-tech">a web page · Svelte</span>
+              <span class="layer-tech">a web page · HTML, CSS and JS</span>
             </div>
             <p class="layer-desc">
-              Draws the browser: tabs, the address field, menus, settings. Swap it, restyle it, or
-              write your own. Standard on the desktop, Mobile on a phone.
+              Draws the browser: tabs, the address field, menus, settings. Anyone can restyle it,
+              swap it, or write their own. Standard on the desktop, Mobile on a phone.
             </p>
           </div>
           <div class="link">messages</div>
           <div class="layer layer-core">
             <div class="layer-head">
-              <span class="layer-name">Go core</span>
+              <span class="layer-name">Core</span>
               <span class="layer-tech">Go · about 30,000 lines</span>
             </div>
             <p class="layer-desc">
-              Owns every decision: tabs, windows, profiles, workspaces, downloads, site settings, the
-              ad blocker, history, bookmarks, updates. It knows nothing about how pages render.
+              Small and safe. Owns every decision: tabs, windows, profiles, workspaces, downloads,
+              site settings, the ad blocker, history, bookmarks, updates. It knows nothing about how
+              pages render.
             </p>
           </div>
           <div class="link">one engine interface</div>
@@ -140,8 +142,9 @@
               <span class="layer-tech">C++ adapter · Chromium 155 content layer</span>
             </div>
             <p class="layer-desc">
-              Gives the core page views and nothing more. The window stays ours, so another engine
-              could take Chromium's place behind the same interface.
+              The fast part. Chromium's content layer, unpatched, gives the core page views and
+              nothing more. The window stays ours, so another engine could take its place behind
+              the same interface.
             </p>
           </div>
         </div>
@@ -186,7 +189,7 @@
     <section class="sec">
       <div class="inner">
         <div class="kicker">What's in it</div>
-        <h2 class="h2">Far enough along to use every day.</h2>
+        <h2 class="h2">What works today.</h2>
         <div class="features">
           <div v-for="f in features" :key="f.name" class="feature">
             <h3 class="feature-name">{{ f.name }}</h3>
@@ -210,11 +213,15 @@
             <li>No Safe Browsing warnings and no popup blocker yet.</li>
             <li>Chrome extensions are built in, but off behind a flag in Settings, Flags.</li>
             <li>
-              Sync isn't wired in yet. Its end-to-end encrypted sync library,
+              Sync is planned, not shipped. It will use
               <a href="https://github.com/sudiptadeb/synckosh" target="_blank" rel="noopener">synckosh</a>,
-              is built and public.
+              an end-to-end encrypted sync library, which is public.
             </li>
             <li>The Mac app isn't notarized, so macOS asks once before the first launch.</li>
+            <li>
+              Development is ongoing, so expect rough edges. Bugs and ideas are welcome in the
+              <a :href="REPO + '/issues'" target="_blank" rel="noopener">issues</a>.
+            </li>
           </ul>
         </div>
       </div>
@@ -239,9 +246,9 @@
               </li>
               <li>
                 <strong>From source:</strong> the
-                <a :href="REPO" target="_blank" rel="noopener">README</a> walks through fetching
-                Chromium and the first build. Without Chromium, the shell runs on a mock engine in a
-                minute.
+                <a :href="REPO + '#readme'" target="_blank" rel="noopener">README</a> walks through
+                fetching Chromium and the first build, and has the details this page leaves out.
+                Without Chromium, the shell runs on a mock engine in a minute.
               </li>
             </ol>
           </div>
@@ -271,8 +278,8 @@ const RELEASES = 'https://github.com/sudiptadeb/project-b/releases/latest'
 
 const features = [
   {
-    name: 'Swappable shells',
-    desc: 'The whole interface is a web page on a small SDK. Change how the browser looks without touching the browser.',
+    name: 'A shell you can change',
+    desc: 'The whole interface is a web page on a small SDK. Change how the browser looks without touching the core or the engine.',
   },
   {
     name: 'Site settings',
@@ -295,8 +302,12 @@ const features = [
     desc: 'Installed copies notice a new release within a minute and offer a relaunch. Mac and Android alike.',
   },
   {
+    name: 'Bookmark folders',
+    desc: 'Sort bookmarks into folders, move them by drag, and search across every folder. New in 0.2.80.',
+  },
+  {
     name: 'The everyday basics',
-    desc: 'Downloads, printing, find in page, history, bookmarks, camera and microphone for calls, video full screen, and tabs that come back.',
+    desc: 'Downloads, printing, find in page, history, camera and microphone for calls, video full screen, and tabs that come back.',
   },
   {
     name: 'Built to be tested',
@@ -307,10 +318,10 @@ const features = [
 useSeoMeta({
   title: 'Project B',
   description:
-    'Project B is an experiment in how a browser could be built with a better architecture: a Go core makes every decision, a swappable web shell draws it, and Chromium\'s unpatched content layer renders pages. For Apple silicon Macs and Android.',
-  ogTitle: 'Project B · a browser rebuilt from the content layer up',
+    'Project B is an experiment in better browser architecture: a web-based shell anyone can customise, a small, safe Go core that makes every decision, and Chromium\'s unpatched content layer to render pages. For Apple silicon Macs and arm64 Android. Development is ongoing.',
+  ogTitle: 'Project B · a browser you can DIY',
   ogDescription:
-    'A Go core, a swappable web shell and Chromium\'s unpatched content layer. Mac and Android, self-updating.',
+    'An experiment in better browser architecture: a web-based shell anyone can customise, a small Go core, and Chromium\'s unpatched content layer. Mac and Android.',
   ogImage: 'https://debkosh.com/images/project-b.webp',
   ogUrl: 'https://debkosh.com/project-b',
   twitterCard: 'summary_large_image',
@@ -327,7 +338,7 @@ useHead({
         name: 'Project B',
         applicationCategory: 'BrowserApplication',
         operatingSystem: 'macOS, Android',
-        softwareVersion: '0.2.79',
+        softwareVersion: '0.2.80',
         url: 'https://debkosh.com/project-b',
         downloadUrl: 'https://github.com/sudiptadeb/project-b/releases/latest',
         author: { '@type': 'Person', name: 'Sudipta Deb', url: 'https://debkosh.com' },
