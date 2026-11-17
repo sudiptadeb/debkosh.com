@@ -11,7 +11,7 @@ tradeoffs really cost.
 - [Home](https://debkosh.com/)
 - [Blog](https://debkosh.com/blogs)
 - [Lab (projects)](https://debkosh.com/labs)
-- [Project B](https://debkosh.com/project-b): the browser experiment's own page
+- [Project B](https://debkosh.com/project-b): the browser experiment's own page (latest release v0.2.80)
 - [RSS feed](https://debkosh.com/rss.xml)
 
 ## Projects
@@ -20,10 +20,13 @@ tradeoffs really cost.
   agents — markdown files you own and version. Also at
   https://memd.debkosh.com
 - [project-b](https://github.com/sudiptadeb/project-b): an experiment in
-  how a browser could be built with a better architecture; a Go core owns
-  every decision, swappable web shells draw it, and Chromium's unpatched
-  content layer renders pages behind one engine interface. Self-updating
-  releases for Apple silicon Macs and arm64 Android.
+  better browser architecture; a web-based shell anyone can customise, a
+  small, safe Go core that owns every decision, and Chromium's unpatched
+  content layer rendering pages behind one engine interface. Releases for
+  Apple silicon Macs and arm64 Android at
+  https://github.com/sudiptadeb/project-b/releases/latest. Bookmark
+  folders shipped in v0.2.80; sync is planned, not shipped. Development
+  is ongoing.
 - [linfer](https://github.com/sudiptadeb/linfer): the best local LLM
   inference setup for your machine; picks llama.cpp or MLX, installs it,
   fetches and sizes the model, serves one OpenAI-compatible URL.

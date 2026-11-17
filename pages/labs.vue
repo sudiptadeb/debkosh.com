@@ -81,8 +81,8 @@ const tools = [
   },
   {
     name: 'project-b',
-    desc: 'An experiment in how a browser could be built with a better architecture: a Go core owns every decision, swappable web shells draw it, and Chromium\'s unpatched content layer renders pages behind one engine interface. Self-updating releases for Mac and arm64 Android.',
-    stack: 'Go · Svelte · Chromium · C++',
+    desc: 'An experiment in better browser architecture: a web-based shell anyone can customise, a small, safe Go core that owns every decision, and Chromium\'s unpatched content layer rendering pages behind one engine interface. Releases for Apple silicon Macs and arm64 Android. Development is ongoing.',
+    stack: 'Go · HTML/JS shell · Chromium · C++',
     year: '2026',
   },
   {

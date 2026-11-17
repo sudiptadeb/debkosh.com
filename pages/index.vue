@@ -111,20 +111,21 @@
         <!-- project-b -->
         <div class="flagship flagship-second">
           <div>
-            <div class="flagship-pill">Experiment · v0.2.79</div>
+            <div class="flagship-pill">Experiment · v0.2.80</div>
             <h3 class="flagship-name">Project B</h3>
             <p class="flagship-tagline">
-              An experiment in how a browser could be built with a better architecture.
+              An experiment in better browser architecture. A browser you can DIY.
             </p>
             <p class="flagship-body">
-              A Go core owns every decision. The interface on top is a web page you can swap, and
-              Chromium's content layer renders the pages, unpatched, behind one engine interface. It
-              runs as a daily browser: per-site settings with an ad blocker, link blocking and
-              userscripts, downloads, printing, a first-run welcome, and default-browser support.
-              One tree builds a Mac DMG and an Android APK, and installed copies update themselves.
+              The interface is a web-based shell anyone can customise or replace. Under it, a small,
+              safe Go core owns every decision, and Chromium's content layer renders the pages,
+              unpatched, behind one engine interface. Working today: per-site settings with an ad
+              blocker, userscripts, workspaces, bookmark folders, downloads and printing. Sync is
+              planned. One tree builds a Mac DMG and an Android APK, and installed copies update
+              themselves. Development is ongoing.
             </p>
             <div class="flagship-stack">
-              Go · Svelte shells · C++ · Chromium 155 content layer · macOS + Android
+              Web-based shell · Go core · C++ adapter · Chromium 155 content layer · macOS + Android
             </div>
             <div class="flagship-links">
               <NuxtLink to="/project-b" class="flagship-btn">
