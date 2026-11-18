@@ -43,14 +43,23 @@
       <div v-for="tool in tools" :key="tool.name" class="table-row">
         <div class="cell-project">
           <span class="dot" />
-          <span class="project-name">{{ tool.name }}</span>
+          <a
+            :href="tool.home || repoUrl(tool)"
+            :target="tool.home?.startsWith('/') ? undefined : '_blank'"
+            rel="noopener"
+            class="project-name row-link"
+          >{{ tool.name }}</a>
           <span v-if="tool.flagship" class="flag-pill">Flagship</span>
         </div>
         <div class="cell-desc">{{ tool.desc }}</div>
         <div class="cell-mono">{{ tool.stack }}</div>
         <div class="cell-mono">{{ tool.year }}</div>
         <div class="cell-link">
-          <a :href="`https://github.com/sudiptadeb/${tool.name}`" target="_blank" rel="noopener">
+          <a v-if="tool.home" :href="tool.home" :target="tool.home.startsWith('/') ? undefined : '_blank'" rel="noopener">
+            {{ tool.home.startsWith('/') ? 'debkosh.com' + tool.home : tool.home.replace('https://', '') }}
+            <Icon :name="tool.home.startsWith('/') ? 'arrow-right' : 'arrow-up-right'" :size="12" />
+          </a>
+          <a :href="repoUrl(tool)" target="_blank" rel="noopener">
             sudiptadeb/{{ tool.name }} <Icon name="arrow-up-right" :size="12" />
           </a>
         </div>
@@ -71,9 +80,13 @@
 </template>
 
 <script setup lang="ts">
-const tools = [
+type Tool = { name: string; desc: string; stack: string; year: string; flagship?: boolean; home?: string }
+const repoUrl = (t: Tool) => `https://github.com/sudiptadeb/${t.name}`
+
+const tools: Tool[] = [
   {
     name: 'memd',
+    home: 'https://memd.debkosh.com',
     flagship: true,
     desc: 'A file-first memory system for AI agents. Markdown files you own and version, the server is only an adapter.',
     stack: 'Markdown · Git · MCP',
@@ -81,6 +94,7 @@ const tools = [
   },
   {
     name: 'project-b',
+    home: '/project-b',
     desc: 'An experiment in better browser architecture: a web-based shell anyone can customise, a small, safe Go core that owns every decision, and Chromium\'s unpatched content layer rendering pages behind one engine interface. Releases for Apple silicon Macs and arm64 Android. Development is ongoing.',
     stack: 'Go · HTML/JS shell · Chromium · C++',
     year: '2026',
@@ -129,6 +143,7 @@ const tools = [
   },
   {
     name: 'gulal',
+    home: '/gulal',
     desc: 'Colours made for where they sit: random, seeded or from text, palettes that sit well together, and for any background the border and inks that read on it. The same output in Go and TypeScript.',
     stack: 'Go · TypeScript · OKLCH · APCA',
     year: '2026',
@@ -300,6 +315,41 @@ useHead({
   background: var(--surface-1);
 }
 
+/* The project name is the row's link; the whole row clicks through to it. */
+.table-row {
+  position: relative;
+}
+
+.row-link {
+  text-decoration: none;
+  background-image: linear-gradient(var(--accent), var(--accent));
+  background-size: 0 1.5px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: color var(--dur-fast) var(--ease-out), background-size var(--dur-fast) var(--ease-out);
+}
+
+.row-link::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+.table-row:hover .row-link,
+.row-link:focus-visible {
+  color: var(--accent);
+  background-size: 100% 1.5px;
+}
+
+.cell-link {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
 .cell-project {
   display: flex;
   align-items: center;
@@ -383,6 +433,10 @@ useHead({
 
   .cell-link {
     text-align: left;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 14px;
+    align-items: center;
   }
 }
 

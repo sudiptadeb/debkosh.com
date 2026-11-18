@@ -78,7 +78,7 @@
         <div class="flagship">
           <div>
             <div class="flagship-pill">Flagship</div>
-            <h3 class="flagship-name">memd</h3>
+            <h3 class="flagship-name"><a href="https://memd.debkosh.com" target="_blank" rel="noopener" class="card-link">memd</a></h3>
             <p class="flagship-tagline">Teach it once, every agent knows it.</p>
             <p class="flagship-body">
               The memory is a set of Markdown files the agent reads and maintains. You own them,
@@ -99,20 +99,20 @@
               </a>
             </div>
           </div>
-          <div class="flagship-media">
+          <a href="https://memd.debkosh.com" target="_blank" rel="noopener" class="flagship-media" aria-label="memd docs">
             <img
               src="/images/memd.webp"
               alt="memd, an agent reading and maintaining its Markdown memory files"
               loading="lazy"
             />
-          </div>
+          </a>
         </div>
 
         <!-- project-b -->
         <div class="flagship flagship-second">
           <div>
             <div class="flagship-pill">Experiment · MIT · v0.2.83</div>
-            <h3 class="flagship-name">Project B</h3>
+            <h3 class="flagship-name"><NuxtLink to="/project-b" class="card-link">Project B</NuxtLink></h3>
             <p class="flagship-tagline">
               An experiment in better browser architecture. A browser you can DIY.
             </p>
@@ -142,13 +142,13 @@
               </a>
             </div>
           </div>
-          <div class="flagship-media">
+          <NuxtLink to="/project-b" class="flagship-media" aria-label="Project B tour">
             <img
               src="/images/project-b.webp"
               alt="Project B in the dark theme with a teal frame on a Mac, showing stripe.com, and the Mobile shell on an Android phone"
               loading="lazy"
             />
-          </div>
+          </NuxtLink>
         </div>
 
         <!-- local AI stack -->
@@ -163,7 +163,7 @@
             </div>
             <div class="card-body">
               <div class="card-head">
-                <h3 class="card-name">linfer</h3>
+                <h3 class="card-name"><a href="https://github.com/sudiptadeb/linfer" target="_blank" rel="noopener" class="card-link">linfer</a></h3>
                 <span class="card-cat">Local LLMs</span>
               </div>
               <p class="card-tagline">
@@ -176,9 +176,9 @@
                 Ollama.
               </p>
               <div class="card-stack">Go · llama.cpp · oMLX · OpenAI-compatible</div>
-              <a href="https://github.com/sudiptadeb/linfer" target="_blank" rel="noopener" class="card-repo">
-                sudiptadeb/linfer <Icon name="arrow-up-right" :size="13" />
-              </a>
+              <div class="card-links">
+                <a href="https://github.com/sudiptadeb/linfer" target="_blank" rel="noopener" class="card-chip"><span class="card-chip-label">Repo</span>sudiptadeb/linfer <Icon name="arrow-up-right" :size="12" /></a>
+              </div>
             </div>
           </div>
 
@@ -192,7 +192,7 @@
             </div>
             <div class="card-body">
               <div class="card-head">
-                <h3 class="card-name">linfer-bench</h3>
+                <h3 class="card-name"><a href="https://github.com/sudiptadeb/linfer-bench" target="_blank" rel="noopener" class="card-link">linfer-bench</a></h3>
                 <span class="card-cat">Benchmark</span>
               </div>
               <p class="card-tagline">
@@ -204,9 +204,9 @@
                 instead of a feeling.
               </p>
               <div class="card-stack">Go · OpenAI-compatible · HTML report</div>
-              <a href="https://github.com/sudiptadeb/linfer-bench" target="_blank" rel="noopener" class="card-repo">
-                sudiptadeb/linfer-bench <Icon name="arrow-up-right" :size="13" />
-              </a>
+              <div class="card-links">
+                <a href="https://github.com/sudiptadeb/linfer-bench" target="_blank" rel="noopener" class="card-chip"><span class="card-chip-label">Repo</span>sudiptadeb/linfer-bench <Icon name="arrow-up-right" :size="12" /></a>
+              </div>
             </div>
           </div>
         </div>
@@ -223,7 +223,7 @@
             </div>
             <div class="card-body">
               <div class="card-head">
-                <h3 class="card-name">termulaa</h3>
+                <h3 class="card-name"><a href="https://github.com/sudiptadeb/termulaa" target="_blank" rel="noopener" class="card-link">termulaa</a></h3>
                 <span class="card-cat">Terminal</span>
               </div>
               <p class="card-tagline">
@@ -237,9 +237,9 @@
                 <code>termulaa exec laptop -- make test</code> from a script.
               </p>
               <div class="card-stack">Go · xterm.js · WebSocket · Android</div>
-              <a href="https://github.com/sudiptadeb/termulaa" target="_blank" rel="noopener" class="card-repo">
-                sudiptadeb/termulaa <Icon name="arrow-up-right" :size="13" />
-              </a>
+              <div class="card-links">
+                <a href="https://github.com/sudiptadeb/termulaa" target="_blank" rel="noopener" class="card-chip"><span class="card-chip-label">Repo</span>sudiptadeb/termulaa <Icon name="arrow-up-right" :size="12" /></a>
+              </div>
             </div>
           </div>
 
@@ -253,7 +253,7 @@
             </div>
             <div class="card-body">
               <div class="card-head">
-                <h3 class="card-name">amarit</h3>
+                <h3 class="card-name"><a href="https://github.com/sudiptadeb/amarit" target="_blank" rel="noopener" class="card-link">amarit</a></h3>
                 <span class="card-cat">Ops · Go library</span>
               </div>
               <p class="card-tagline">Keep it alive. Keep it current.</p>
@@ -264,9 +264,9 @@
                 root, no ports.
               </p>
               <div class="card-stack card-install">curl -fsSL https://raw.githubusercontent.com/sudiptadeb/amarit/main/install.sh | sh</div>
-              <a href="https://github.com/sudiptadeb/amarit" target="_blank" rel="noopener" class="card-repo">
-                sudiptadeb/amarit <Icon name="arrow-up-right" :size="13" />
-              </a>
+              <div class="card-links">
+                <a href="https://github.com/sudiptadeb/amarit" target="_blank" rel="noopener" class="card-chip"><span class="card-chip-label">Repo</span>sudiptadeb/amarit <Icon name="arrow-up-right" :size="12" /></a>
+              </div>
             </div>
           </div>
         </div>
@@ -276,7 +276,7 @@
           <div class="card">
             <div class="card-body card-body-flat">
               <div class="card-head">
-                <h3 class="card-name">synckosh</h3>
+                <h3 class="card-name"><a href="https://github.com/sudiptadeb/synckosh" target="_blank" rel="noopener" class="card-link">synckosh</a></h3>
                 <span class="card-cat">Sync · Go library</span>
               </div>
               <p class="card-tagline">Sync for apps that keep the user's data on their devices.</p>
@@ -287,16 +287,16 @@
                 <code>http.Handler</code> you mount behind your own sign-in.
               </p>
               <div class="card-stack">Go · bbolt · end-to-end encrypted</div>
-              <a href="https://github.com/sudiptadeb/synckosh" target="_blank" rel="noopener" class="card-repo">
-                sudiptadeb/synckosh <Icon name="arrow-up-right" :size="13" />
-              </a>
+              <div class="card-links">
+                <a href="https://github.com/sudiptadeb/synckosh" target="_blank" rel="noopener" class="card-chip"><span class="card-chip-label">Repo</span>sudiptadeb/synckosh <Icon name="arrow-up-right" :size="12" /></a>
+              </div>
             </div>
           </div>
 
           <div class="card">
             <div class="card-body card-body-flat">
               <div class="card-head">
-                <h3 class="card-name">keykosh</h3>
+                <h3 class="card-name"><a href="https://github.com/sudiptadeb/keykosh" target="_blank" rel="noopener" class="card-link">keykosh</a></h3>
                 <span class="card-cat">Secrets · CLI</span>
               </div>
               <p class="card-tagline">Your keys in one folder, sealed with one passphrase.</p>
@@ -307,9 +307,9 @@
                 read.
               </p>
               <div class="card-stack">Go · age · git</div>
-              <a href="https://github.com/sudiptadeb/keykosh" target="_blank" rel="noopener" class="card-repo">
-                sudiptadeb/keykosh <Icon name="arrow-up-right" :size="13" />
-              </a>
+              <div class="card-links">
+                <a href="https://github.com/sudiptadeb/keykosh" target="_blank" rel="noopener" class="card-chip"><span class="card-chip-label">Repo</span>sudiptadeb/keykosh <Icon name="arrow-up-right" :size="12" /></a>
+              </div>
             </div>
           </div>
         </div>
@@ -326,7 +326,7 @@
             </div>
             <div class="card-body">
               <div class="card-head">
-                <h3 class="card-name">keysat</h3>
+                <h3 class="card-name"><a href="https://github.com/sudiptadeb/keysat" target="_blank" rel="noopener" class="card-link">keysat</a></h3>
                 <span class="card-cat">macOS · same system</span>
               </div>
               <p class="card-tagline">A local-first keystroke and activity tracker for macOS.</p>
@@ -336,9 +336,9 @@
                 stored.
               </p>
               <div class="card-stack">Go · SQLite + FTS5 · Alpine.js</div>
-              <a href="https://github.com/sudiptadeb/keysat" target="_blank" rel="noopener" class="card-repo">
-                sudiptadeb/keysat <Icon name="arrow-up-right" :size="13" />
-              </a>
+              <div class="card-links">
+                <a href="https://github.com/sudiptadeb/keysat" target="_blank" rel="noopener" class="card-chip"><span class="card-chip-label">Repo</span>sudiptadeb/keysat <Icon name="arrow-up-right" :size="12" /></a>
+              </div>
             </div>
           </div>
 
@@ -352,7 +352,7 @@
             </div>
             <div class="card-body">
               <div class="card-head">
-                <h3 class="card-name">etchosts</h3>
+                <h3 class="card-name"><a href="https://github.com/sudiptadeb/etchosts" target="_blank" rel="noopener" class="card-link">etchosts</a></h3>
                 <span class="card-cat">Android</span>
               </div>
               <p class="card-tagline">An /etc/hosts file for your phone, without root.</p>
@@ -362,9 +362,9 @@
                 staging box by name, per app if you like. Edits apply live.
               </p>
               <div class="card-stack">Kotlin · VpnService · DoH</div>
-              <a href="https://github.com/sudiptadeb/etchosts" target="_blank" rel="noopener" class="card-repo">
-                sudiptadeb/etchosts <Icon name="arrow-up-right" :size="13" />
-              </a>
+              <div class="card-links">
+                <a href="https://github.com/sudiptadeb/etchosts" target="_blank" rel="noopener" class="card-chip"><span class="card-chip-label">Repo</span>sudiptadeb/etchosts <Icon name="arrow-up-right" :size="12" /></a>
+              </div>
             </div>
           </div>
         </div>
@@ -374,7 +374,7 @@
           <div class="card">
             <div class="card-body card-body-flat">
               <div class="card-head">
-                <h3 class="card-name">gulal</h3>
+                <h3 class="card-name"><NuxtLink to="/gulal" class="card-link">gulal</NuxtLink></h3>
                 <span class="card-cat">Colour · Go + TS library</span>
               </div>
               <p class="card-tagline">Colours made for where they sit.</p>
@@ -384,9 +384,10 @@
                 inks that read on it. The same output in Go and TypeScript.
               </p>
               <div class="card-stack">Go · TypeScript · OKLCH · APCA</div>
-              <NuxtLink to="/gulal" class="card-repo">
-                debkosh.com/gulal <Icon name="arrow-up-right" :size="13" />
-              </NuxtLink>
+              <div class="card-links">
+                <NuxtLink to="/gulal" class="card-chip"><span class="card-chip-label">Site</span>debkosh.com/gulal <Icon name="arrow-right" :size="12" /></NuxtLink>
+                <a href="https://github.com/sudiptadeb/gulal" target="_blank" rel="noopener" class="card-chip"><span class="card-chip-label">Repo</span>sudiptadeb/gulal <Icon name="arrow-up-right" :size="12" /></a>
+              </div>
             </div>
           </div>
         </div>
@@ -396,7 +397,7 @@
           <div class="card">
             <div class="card-body card-body-flat">
               <div class="card-head">
-                <h3 class="card-name">deskrig</h3>
+                <h3 class="card-name"><a href="https://github.com/sudiptadeb/deskrig" target="_blank" rel="noopener" class="card-link">deskrig</a></h3>
                 <span class="card-cat">Testing · agents</span>
               </div>
               <p class="card-tagline">Let an agent test an app the way a person would.</p>
@@ -406,16 +407,16 @@
                 commands. Works from agent shells, ssh and CI, which have no display.
               </p>
               <div class="card-stack">Go · macOS · Tart</div>
-              <a href="https://github.com/sudiptadeb/deskrig" target="_blank" rel="noopener" class="card-repo">
-                sudiptadeb/deskrig <Icon name="arrow-up-right" :size="13" />
-              </a>
+              <div class="card-links">
+                <a href="https://github.com/sudiptadeb/deskrig" target="_blank" rel="noopener" class="card-chip"><span class="card-chip-label">Repo</span>sudiptadeb/deskrig <Icon name="arrow-up-right" :size="12" /></a>
+              </div>
             </div>
           </div>
 
           <div class="card">
             <div class="card-body card-body-flat">
               <div class="card-head">
-                <h3 class="card-name">sackup</h3>
+                <h3 class="card-name"><a href="https://github.com/sudiptadeb/sackup" target="_blank" rel="noopener" class="card-link">sackup</a></h3>
                 <span class="card-cat">Android</span>
               </div>
               <p class="card-tagline">
@@ -427,9 +428,9 @@
                 for people who find most apps overwhelming.
               </p>
               <div class="card-stack">Kotlin · Jetpack Compose · USB-OTG</div>
-              <a href="https://github.com/sudiptadeb/sackup" target="_blank" rel="noopener" class="card-repo">
-                sudiptadeb/sackup <Icon name="arrow-up-right" :size="13" />
-              </a>
+              <div class="card-links">
+                <a href="https://github.com/sudiptadeb/sackup" target="_blank" rel="noopener" class="card-chip"><span class="card-chip-label">Repo</span>sudiptadeb/sackup <Icon name="arrow-up-right" :size="12" /></a>
+              </div>
             </div>
           </div>
         </div>
@@ -1056,19 +1057,71 @@ useHead({
   padding-top: 6px;
 }
 
-.card-repo {
+/* ----- card links: the name is the card's link; the whole card clicks through ----- */
+.card { position: relative; }
+.card-link {
+  color: inherit;
+  text-decoration: none;
+  background-image: linear-gradient(var(--accent), var(--accent));
+  background-size: 0 1.5px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: color var(--dur-fast) var(--ease-out), background-size var(--dur-fast) var(--ease-out);
+}
+.card .card-link::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.card:hover .card-link,
+.card-link:hover,
+.card-link:focus-visible,
+.flagship-name .card-link:hover {
+  color: var(--accent);
+  background-size: 100% 1.5px;
+}
+.card:has(.card-link) { cursor: pointer; }
+.card-links,
+.card-install {
+  position: relative;
+  z-index: 1;
+}
+.card-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+.card-chip {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 7px;
   font: 500 11.5px/1 var(--font-mono);
   color: var(--accent);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 8px 11px;
   text-decoration: none;
-  transition: color var(--dur-fast) var(--ease-out);
+  transition: border-color var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out);
 }
-
-.card-repo:hover {
+.card-chip:hover,
+.card-chip:focus-visible {
+  border-color: var(--accent);
   color: var(--accent-hover);
 }
+.card-chip-label {
+  font: 500 9px/1 var(--font-mono);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--fg-3);
+}
+a.flagship-media {
+  display: block;
+  transition: border-color var(--dur-fast) var(--ease-out);
+}
+a.flagship-media:hover { border-color: var(--accent); }
 
 .more-wide {
   grid-column: 1 / -1;
