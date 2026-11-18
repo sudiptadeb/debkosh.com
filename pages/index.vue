@@ -111,7 +111,7 @@
         <!-- project-b -->
         <div class="flagship flagship-second">
           <div>
-            <div class="flagship-pill">Experiment · v0.2.80</div>
+            <div class="flagship-pill">Experiment · MIT · v0.2.83</div>
             <h3 class="flagship-name">Project B</h3>
             <p class="flagship-tagline">
               An experiment in better browser architecture. A browser you can DIY.

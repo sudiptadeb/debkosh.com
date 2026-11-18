@@ -15,7 +15,7 @@
       <div class="inner">
         <div class="eyebrow">
           <span class="dot" />
-          An experiment · v0.2.80 · development ongoing
+          An experiment · v0.2.83 · open source · development ongoing
         </div>
         <h1 class="title">
           Project B: a browser you can <span class="accent">DIY</span>.
@@ -219,9 +219,9 @@
             </li>
             <li>The Mac app isn't notarized, so macOS asks once before the first launch.</li>
             <li>
-              The code is on GitHub to read. It is not open source: the
-              <a :href="REPO + '/blob/main/LICENSE'" target="_blank" rel="noopener">licence</a>
-              reserves all rights.
+              It's open source under the
+              <a :href="REPO + '/blob/main/LICENSE'" target="_blank" rel="noopener">MIT licence</a>,
+              so fork it, change it and ship your own.
             </li>
             <li>
               Development is ongoing, so expect rough edges. Bugs and ideas are welcome in the
@@ -343,7 +343,9 @@ useHead({
         name: 'Project B',
         applicationCategory: 'BrowserApplication',
         operatingSystem: 'macOS, Android',
-        softwareVersion: '0.2.80',
+        softwareVersion: '0.2.83',
+        license: 'https://github.com/sudiptadeb/project-b/blob/main/LICENSE',
+        codeRepository: 'https://github.com/sudiptadeb/project-b',
         url: 'https://debkosh.com/project-b',
         downloadUrl: 'https://github.com/sudiptadeb/project-b/releases/latest',
         author: { '@type': 'Person', name: 'Sudipta Deb', url: 'https://debkosh.com' },
