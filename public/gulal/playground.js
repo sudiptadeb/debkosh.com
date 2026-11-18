@@ -138,7 +138,7 @@ export function mount(el, lib) {
     const opts = { seed: s.seed, scheme: s.scheme, background: s.background, accent: s.accent };
     const gulal = lib.env(opts);
     $('gp-code').textContent =
-      `import { env } from 'gulal';\n\nconst gulal = env(${JSON.stringify(opts, null, 2).replace(/"(\w+)":/g, '$1:').replace(/"/g, "'")});\n\n` +
+      `import { env } from '@debkosh/gulal';\n\nconst gulal = env(${JSON.stringify(opts, null, 2).replace(/"(\w+)":/g, '$1:').replace(/"/g, "'")});\n\n` +
       `gulal.swatch('${s.card}');         // a border and the inks for a background\n` +
       `gulal.fromText('news.example.com'); // the same colour every time\n` +
       `gulal.${s.kind}(${s.n});${' '.repeat(Math.max(1, 26 - s.kind.length - String(s.n).length))}// a palette`;

@@ -76,7 +76,7 @@
     <section class="sec">
       <div class="inner">
         <div class="kicker">Install</div>
-        <pre class="code">npm install gulal
+        <pre class="code">npm install @debkosh/gulal
 go get github.com/sudiptadeb/gulal</pre>
       </div>
     </section>
