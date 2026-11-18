@@ -128,6 +128,12 @@ const tools = [
     year: '2026',
   },
   {
+    name: 'gulal',
+    desc: 'Colours made for where they sit: random, seeded or from text, palettes that sit well together, and for any background the border and inks that read on it. The same output in Go and TypeScript.',
+    stack: 'Go · TypeScript · OKLCH · APCA',
+    year: '2026',
+  },
+  {
     name: 'deskrig',
     desc: 'One testing interface for agents: window screenshots, real clicks, keys and trackpad scrolls, a frame stream and DMG installs, on this Mac or a clean macOS VM. Works without a display.',
     stack: 'Go · macOS · Tart',
@@ -150,7 +156,7 @@ const tools = [
 useSeoMeta({
   title: 'Lab',
   description:
-    'The maintained tools, indexed: memd, project-b, linfer, linfer-bench, amarit, termulaa, etchosts, synckosh, keykosh, deskrig, keysat, and sackup. Each entry is real, builds, and did the job it was made for.',
+    'The maintained tools, indexed: memd, project-b, linfer, linfer-bench, amarit, termulaa, etchosts, synckosh, keykosh, gulal, deskrig, keysat, and sackup. Each entry is real, builds, and did the job it was made for.',
   ogTitle: 'The lab · Sudipta Deb',
   ogDescription: 'The tools I keep running.',
   ogImage: 'https://debkosh.com/og/default.png',

@@ -369,6 +369,28 @@
           </div>
         </div>
 
+        <!-- gulal -->
+        <div class="cards-2">
+          <div class="card">
+            <div class="card-body card-body-flat">
+              <div class="card-head">
+                <h3 class="card-name">gulal</h3>
+                <span class="card-cat">Colour · Go + TS library</span>
+              </div>
+              <p class="card-tagline">Colours made for where they sit.</p>
+              <p class="card-desc">
+                Random, seeded or from text, in palettes that sit well together, each fitted to the
+                scheme, background and accent it will sit with. For any background, the border and
+                inks that read on it. The same output in Go and TypeScript.
+              </p>
+              <div class="card-stack">Go · TypeScript · OKLCH · APCA</div>
+              <NuxtLink to="/gulal" class="card-repo">
+                debkosh.com/gulal <Icon name="arrow-up-right" :size="13" />
+              </NuxtLink>
+            </div>
+          </div>
+        </div>
+
         <!-- deskrig, sackup -->
         <div class="cards-2">
           <div class="card">
