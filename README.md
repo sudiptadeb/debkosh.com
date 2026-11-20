@@ -15,6 +15,13 @@ layered surfaces, single Sky accent, hairline borders). Static generation, no se
 | `/labs` | Project index, maintained tools only |
 | `/project-b` | Project B's own page: hero, architecture, gallery, features, honest status, install |
 
+Project cards and labs rows link the same way: the project name is the link, the
+whole card or row clicks through to it (a stretched `::after`), and the link
+chips sit above that layer. The target is the project's own page when it has
+one (memd docs, `/project-b`, `/gulal`), else its repo. A new project follows
+the same markup: `card-link` on the name and `card-chip`s for Site and Repo on
+the home page, and `home` in the `tools` list on `/labs`.
+
 ## Content
 
 Blog posts are Markdown files in `content/blog/` with frontmatter:
